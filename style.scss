@@ -10,149 +10,120 @@ Version: 1.0
 // ===== Typographies ==========================================
 
 // ===== Embeds
-@font-face { font-family: 'amatic_regular';
-  //src: url("assets/fonts/Amatic/AmaticSC-Regular.eot");
-  src: //url("assets/fonts/Amatic/AmaticSC-Regular.eot?#iefix") format('embedded-opentype'),
-   //url("assets/fonts/Amatic/AmaticSC-Regular.woff2") format('woff2'),
-   //url("assets/fonts/Amatic/AmaticSC-Regular.woff") format('woff'),
-   url("assets/fonts/Amatic/AmaticSC-Regular.ttf") format('truetype'),
-   //url("assets/fonts/Amatic/AmaticSC-Regular.svg#Amatic-Regular") format('svg')
-   ;
-}
-@font-face { font-family: 'amatic_bold';
-  //src: url("assets/fonts/Amatic/Amatic-Bold.eot");
-  src: //url("assets/fonts/Amatic/Amatic-Bold.eot?#iefix") format('embedded-opentype'),
-   //url("assets/fonts/Amatic/Amatic-Bold.woff2") format('woff2'),
-   //url("assets/fonts/Amatic/Amatic-Bold.woff") format('woff'),
-   url("assets/fonts/Amatic/Amatic-Bold.ttf") format('truetype'),
-   //url("assets/fonts/Amatic/Amatic-Bold.svg#Amatic-Bold") format('svg')
-   ;
-}
-@font-face { font-family: 'jenna_sue';
-  src: url("assets/fonts/JennaSue/jennasue-webfont.eot");
-  src: url("assets/fonts/JennaSue/jennasue-webfont.eot?#iefix") format('embedded-opentype'),
-  url("assets/fonts/JennaSue/jennasue-webfont.woff2") format('woff2'),
-  url("assets/fonts/JennaSue/jennasue-webfont.woff") format('woff'),
-  url("assets/fonts/JennaSue/jennasue-webfont.ttf") format('truetype'),
-  url("assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular") format('svg');
-}
-@font-face { font-family: 'yanone_bold';
-  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot");
-  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold") format('svg');
-}
-@font-face { font-family: 'yanone_light';
-  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot");
-  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format('svg');
-}
-@font-face { font-family: 'yanone_regular';
-  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot");
-  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format('svg');
-}
-@font-face { font-family: 'yanone_thin';
-  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot");
-  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format('svg');
-}
 
 // ===== Mixings
-@mixin font-amatic_regular{
-  font-family: 'amatic_regular';
-  font-weight: normal;
-  font-style: normal;
-}
-@mixin font-amatic_bold{
-  font-family: 'amatic_bold';
-  font-weight: normal;
-  font-style: normal;
-}
-@mixin font-jenna_sue{
-  font-family: 'jenna_sue';
-  font-weight: normal;
-  font-style: normal;
-}
-@mixin font-yanone_regular{
-  font-family: 'yanone_regular';
+@mixin font-Open_Sans{
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
   letter-spacing: 1px;
 }
 
 // ===== Palette ===========================================
+$black:#000;
+$white: #fff;
+
+$blue-0: #134a61;
+$blue-1: #689ebd;
+$blue-2: #76c7cb;
+
+$gray-0: #444242;
+$gray-1: #5b5b5f;
+$gray-2: #87868a;
+$gray-3: #9a999e;
+$gray-4: #c6c6c6;
+
 $menu_item: #fff;
 $menu_item-hover: #fff;
 $menu_item-active: #fff;
-$icon_bar: $turquesa-pastel;
-
-$black:#474747;
-$grey: #a8a8a8;
-$white: #fff;
-
-$marron: #ccc0af;//texto-oscuro, menu-item active, fondo banda
-$morado: #c6b6b8;
-$blanco: #fff;
-$amarillo: #fff9e9;//fondo
+$icon_bar: $blue-2;
 
 // ===== Scales ==========================================
-$gutter: 15px;
-$baseFontSize: 16;  //  <------------
+$gutter: 10px;
+$baseFontSize: 16;
+$baseLineHeight: 1.3;
 html {
   font-size: $baseFontSize + px;
 }
-$baseFontSize: $baseFontSize / 10;
-$baseLineHeight: $baseFontSize * 1.3; //  <------------
 @mixin font-size($sizeValue){
   font-size: ($sizeValue * $baseFontSize) + px;
   font-size: ($sizeValue) + rem;
 }
 @mixin line-height($LineHeight){
-  line-height: ($LineHeight * $baseLineHeight) + px;
-  line-height: ($LineHeight) + rem;
+  line-height: ($LineHeight * $baseFontSize * $baseLineHeight) + px;
+  line-height: ($LineHeight  * $baseLineHeight) + rem;
 }
-$menu-text: 1.29rem;
-$menu-lineHeight: 20px;
 
 // ===== HTML Elements ======================================
-h1 {
-  font-family: 'amatic_regular';
+h1 { //headings from navbar
+  @include font-Open_Sans;
   @include font-size(4);
-  color: $marron;
+  @include line-height(4);
+  color: $gray-2;
+}
+h2 { //sub-headings
+  @include font-Open_Sans;
+  @include font-size(3);
+  @include line-height(3);
+  color: $gray-2;
 }
 a,a:active,a:visited,a:hover,a:link,a:focus{
-  text-decoration: none;
+  @include font-Open_Sans;
   @include font-size(1);
-  color: $negro;
+  @include line-height(1);
+  text-decoration: none;
+  color: $gray-2;
 }
 p{
-  color: $marron;
-  margin: 0;
+  @include font-Open_Sans;
   @include font-size(1);
+  @include line-height(1);
+  color: $gray-2;
+  margin: 0;
 }
+
 
 // ===== Objects ===========================================
 $xy-menu-button: 44px;
 
 
 body {
-  background-color: $white;
+  background-color: #a8a8a8; //$white;
 }
 .wrapper {
   position: relative;
 }
-#navbar {
+#header {
   // ==== Navbar reset
   .navbar,
   .navbar-default,
   .navbar-collapse,
   .navbar-default .navbar-toggle:focus,
-  .navbar-default .navbar-toggle:hover,
-  .navbar button {
+  .navbar-default .navbar-toggle:hover {
     background: none;
     border: none;
     border-radius: 0;
     margin: 0 (-($gutter));
   }
+  .buttons{
+    text-align: center;
+    button {
+      background: none;
+      border: none;
+      border-radius: 0;
+    }
+    a,a:active,a:visited,a:hover,a:link,a:focus{
+      text-decoration: none;
+    }
+    .button_item{
+      position: relative;
+      a{
+        display: block;
+      }
+    }
+  }
 
   position: absolute;
-  margin-top: $padding-top-content;
   left: 0;
   right: 0;
   border: 0;
@@ -161,28 +132,20 @@ body {
     min-height: $xy-menu-button;
   }
 }
-#navbar.fixed {
+#header.fixed {
   position: fixed;
   margin-top: 0;
   top: 0;
-  .heading{
-    background-color: $amarillo;
-  }
 }
 #collapse-menu{
   position: absolute;
-  background-position: center  (-$padding-top-content);
-  background-color: $amarillo;
   left: 0;
   right: 0;
   padding: 5px $xy-menu-button 10px;
   margin: 0;
 }
-#fullpage {
-  margin: -($gutter * 2) 0;
-}
 .section{
-  margin: ($gutter * 2) 0;
+  //padding: ($gutter * 2) 0;
 }
 .form-content  {
   .hp-wrap{
@@ -192,7 +155,7 @@ body {
   }
   .field-wrap{
     margin-bottom: $gutter / 3;
-    background-color: $blanco;
+    background-color: $white;
   }
   .textarea-wrap textarea{
     height: $xy-menu-button * 2;
@@ -203,8 +166,8 @@ body {
     background: none;
   }
   .ninja-forms-field {
-    color: $gris;
-    background-color: $blanco;
+    color: $gray-2;
+    background-color: $white;
     border-width: 0;
     border-color: none;
     min-height: $xy-menu-button;
@@ -213,37 +176,32 @@ body {
   }
   .ninja-forms-response-msg, .ninja-forms-error-msg{
     p {
-      color: darken($marron, 15%);
+      color: $white;
     }
-    background: $amarillo;
+    background: $black;
     text-align: center;
     padding: 0 12px;
     margin-bottom: 5px;
     opacity: 0.95;
   }
   .ninja-forms-success-msg {
-    background: $blanco;
+    background: $white;
     padding: 20px;
   }
   .ninja-forms-field-error{
-    color: darken($marron, 15%);
-    background-color: $amarillo;
+    color: $white;
+    background-color: $black;
     text-align: center;
     padding: 0 12px;
     opacity: 0.95;
   }
   #ninja_forms_field_16, #ninja_forms_field_7{
-    background-color: $turquesa-claro;
+    background-color: $black;
     background-clip: padding-box;
     border: 8px solid transparent;
-    border-color: $turquesa-claro;
-    -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-    -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-    border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round;
-    color: $blanco;
-    @include font-yanone_regular;
+    border-color: $black;
+    color: $white;
+    @include font-Open_Sans;
     width: 50%;
     margin-left: 25%;
     padding: 4px 16px;
@@ -252,60 +210,58 @@ body {
 
 // ===== Header =================================================
 .brand {
-  max-width: 100%;
-  padding: 0;
-  div {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: $logo-ancho $logo-alto;
-    width: $logo-ancho;
-    height: $logo-alto;
-  }
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 83.333333%;
+  width: 100%;
+  padding-top: 60%;
 }
-#navbar {
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      background-color: $turquesa-claro;
-      background-clip: padding-box;
-      border: 8px solid ;
-      border-color: $turquesa-claro;
-      -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-      -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-      -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-      border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round;
-
-      margin-bottom: 7px;
-      text-align: center;
-      a,a:active,a:visited,a:hover,a:link,a:focus{
-        display: block;
-        text-decoration: none;
-        padding: 4px 0;
-        color: $blanco;
-        @include font-yanone_regular;
-        font-size: $menu-text;
-        line-height: $linea_altura_menu;
+#header {
+  background-color: $white;
+  nav{
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        background-color: darken($blue-2, 10%);
+        border-bottom: 1px solid $gray-3 ;
+        a,a:active,a:visited,a:hover,a:link,a:focus{
+          padding: 22px ( $gutter * 2 );
+          @include font-Open_Sans;
+          @include font-size(1);
+          @include line-height(1);
+          color: $white;
+          letter-spacing: 5px;
+          //text-align: center;
+        }
       }
     }
   }
-  button {
-    position: absolute;
-    right: 0;
-    height: $xy-menu-button;
-    width: $xy-menu-button;
-    margin: 5px 0 0;
-    padding: 9px 12px;
-    z-index: 888;
-    .icon-bar {
-      background-color: $icon-bar;
-      height: 4px;
-      width: 20px;
+  .buttons{
+    button {
+      height: $xy-menu-button;
+      width: $xy-menu-button;
+      padding: 9px 12px;
+      .icon-bar {
+        display: block;
+        border-radius: 1px;
+        background-color: $icon-bar;
+        height: 4px;
+        width: 20px;
+      }
+      .icon-bar+.icon-bar {
+        margin-top: 3px;
+      }
     }
-    .icon-bar+.icon-bar {
-      margin-top: 3px;
+  }
+  .social_networks{
+    a{
+      height: $xy-menu-button;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
   }
 }
@@ -369,15 +325,16 @@ body {
   }
 }
 
-/* Ultra small devices (phones, less than 480px) */
-/* Extra small devices (tablets, 480px and up) */
-@media (min-width: 480px) {
-
-
-}
+/* Extra small devices (phones, less than 768px) */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
+  // ===== Objects ===========================================
+  #header{
+    button{
+      display: none;
+    }
+  }
 
 }
 /* Medium devices (desktops, 992px and up) */

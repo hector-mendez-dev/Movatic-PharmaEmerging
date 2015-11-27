@@ -15,5 +15,7 @@ if (window.addEventListener) {                // For all major browsers, gte IE 
 	window.attachEvent("onload", init);
 }
 $( document ).ready(function() {
-	//init();
+	init();
+	$('#fullpage').fullpage();
+
 });

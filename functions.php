@@ -43,7 +43,7 @@ if ( !is_admin() ){
 			'script1' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js',
 			'script2' => 'https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js',
 			'script3' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js',
-			'script4' => 'https://cdnjs.cloudflare.com/ajax/libs/fullPage/2.6.6/jquery.fullPage.min.js'
+			'script4' => 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js'
 			);
 		foreach( $scripts_CDN as $key=>$sc ){
 			wp_register_script( $key , $sc , array('jquery'));
@@ -75,9 +75,9 @@ add_filter('upload_mimes','cc_mime_types');
 // ===== Post Types =====
 
 /*
-	EJEMPLO FULL DATA
+	EXAMPLE FULL DATA
 
-	function nombre_post_type() {
+	function name_post_type() {
 	  $labels = array(
 	    'name'               => 'Plural Name',
 	    'singular_name'      => 'Name',
