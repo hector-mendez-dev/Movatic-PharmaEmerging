@@ -23,73 +23,70 @@
 <body>
 
   <div id="header">
-      <div class="container-fluid">
+    <div class="container-fluid">
 
-        <div class="row">
+      <div class="row">
 
-          <div class="col-xs-12">
-            <a class="brand" title="PHARMA EMERGING" href="#Home"
-            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/pharma_emerging/logo.svg );">
-            </a>
-          </div>
+        <div class="col-xs-12 col-sm-5 col-md-4">
+          <a class="brand" title="PHARMA EMERGING" href="#Home"
+          style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/pharma_emerging/logo.svg );">
+          </a>
+        </div>
 
-          <div class="col-xs-12">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0 col-md-8">
+          <div class="row buttons social_networks">
 
-            <div class="row">
-
-              <div class="col-xs-10 col-xs-offset-1">
-                <div class="row buttons social_networks">
-
-                  <div class="col-xs-3 button_item">
-                    <button type="button" class=" collapsed"data-toggle="collapse" data-target="#collapse-menu">
-                      <span class="sr-only">toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                  </div>
-                  <div class="col-xs-3 button_item">
-                    <a href="<?php //the_field('twitter', 30 );?>" target="_blank"
-                    style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/twitter.svg );">
-                    </a>
-                  </div>
-                  <div class="col-xs-3 button_item">
-                    <a href="<?php //the_field('instagram', 30 );?>" target="_blank"
-                    style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/instagram.svg );">
-                    </a>
-                  </div>
-                  <div class="col-xs-3 button_item">
-                    <a href="<?php //the_field('facebook', 30 );?>" target="_blank"
-                    style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/facebook.svg );">
-                    </a>
-                  </div>
-
-
-                </div>
-              </div>
-
-              <div class="col-xs-12">
-                <nav class="navbar navbar-default">
-
-                  <div class="collapse navbar-collapse" id="collapse-menu">
-                    <ul class="nav navbar-nav">
-                      <li data-menuanchor="Home"><a href="#Home">HOME</a></li>
-                      <li data-menuanchor="Who"><a href="#Who">WHO WE ARE?</a></li>
-                      <li data-menuanchor="Service"><a href="#Service">SERVICE</a></li>
-                      <li data-menuanchor="Contact"><a href="#Contact">CONTACT US</a></li>
-                    </ul>
-                  </div><!-- Collapse -->
-
-                </nav>
-              </div>
-
-
+            <div class="col-xs-3 col-sm-6 col-md-9 button_item">
+              <button type="button" class=" collapsed"data-toggle="collapse" data-target="#collapse-menu">
+                <span class="sr-only">toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
             </div>
+            <div class="col-xs-3 col-sm-2 col-md-1 button_item">
+              <a href="<?php //the_field('twitter', 30 );?>" target="_blank">
+                <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/twitter.svg );">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-1 button_item">
+              <a href="<?php //the_field('instagram', 30 );?>" target="_blank">
+                <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/instagram.svg );">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-1 button_item">
+              <a href="<?php //the_field('facebook', 30 );?>" target="_blank">
+                <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/facebook.svg );">
+                </div>
+              </a>
+            </div>
+
+
           </div>
         </div>
 
+        <div class="col-xs-12 col-md-8">
+          <nav class="navbar navbar-default">
+
+            <div class="collapse navbar-collapse" id="collapse-menu">
+              <ul class="nav navbar-nav">
+                <li data-menuanchor="Home"><a href="#Home">HOME</a></li>
+                <li data-menuanchor="Who"><a href="#Who">WHO WE ARE?</a></li>
+                <li data-menuanchor="Service"><a href="#Service">SERVICE</a></li>
+                <li data-menuanchor="Contact"><a href="#Contact">CONTACT US</a></li>
+              </ul>
+            </div><!-- Collapse -->
+
+          </nav>
+        </div>
+
+
       </div>
     </div>
+
+  </div>
 
   <div class="container-fluid">
     <div id="fullpage">
