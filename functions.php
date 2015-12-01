@@ -130,7 +130,7 @@ function slide_post_type() {
 		'public'        => true,
 		'menu_position' => 6,
 		'menu_icon'     => 'dashicons-image-flip-horizontal',
-		'supports'      => array(  'title' , 'page-attributes'  ),
+		'supports'      => array(  'title'  ),
 		'has_archive'   => true
 	);
 	register_post_type( 'slide', $args );

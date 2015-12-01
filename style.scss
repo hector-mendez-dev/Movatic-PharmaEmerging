@@ -39,8 +39,8 @@ $menu_item-active: #fff;
 $icon_bar: $blue-2;
 
 // ===== Scales ==========================================
-$gutter: 10px;
-$baseFontSize: 16;
+$gutter: 8px;
+$baseFontSize: 14;
 $baseLineHeight: 1.3;
 html {
   font-size: $baseFontSize + px;
@@ -83,6 +83,12 @@ h2 { //sub-headings
   @include line-height(3);
   color: $gray-2;
 }
+h3 { //sub-headings
+  @include font-Open_Sans;
+  @include font-size(2);
+  @include line-height(2);
+  color: $gray-2;
+}
 a,a:active,a:visited,a:hover,a:link,a:focus{
   @include font-Open_Sans;
   @include font-size(1);
@@ -122,6 +128,15 @@ body {
     margin: 0;
   }
   //--
+
+  position: relative;
+  left: 0;
+  right: 0;
+  border: 0;
+  z-index: 888;
+  .navbar {
+    min-height: $xy-menu-button;
+  }
   .buttons{
     button {
       background: none;
@@ -137,15 +152,6 @@ body {
       }
     }
   }
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  border: 0;
-  z-index: 888;
-  .navbar {
-    min-height: $xy-menu-button;
-  }
 }
 #header.fixed {
   position: fixed;
@@ -154,6 +160,18 @@ body {
 }
 .section{
   //padding: ($gutter * 2) 0;
+  .section-table{
+    display: table;
+    height: inherit;
+    width: 100%;
+    .section-row {
+      display: table-row;
+      .section-cell{
+        display: table-cell;
+      }
+    }
+  }
+
 }
 .form-content  {
   .hp-wrap{
@@ -246,6 +264,27 @@ body {
         }
       }
     }
+    #transition-menu {
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 230px;
+      -webkit-transition: left 1.35s ease;
+      -moz-transition: left 1.35s ease;
+      -o-transition: left 1.35s ease;
+      transition: left 1.35s ease;
+    }
+    #transition-menu.show {
+      left: 0;
+      //width: 200px;
+      -webkit-transition: left 1.35s ease;
+      -moz-transition: left 1.35s ease;
+      -o-transition: left 1.35s ease;
+      transition: left 1.35s ease;
+    }
+
   }
   .buttons{
     text-align: center;
@@ -311,7 +350,32 @@ body {
 
 // ===== Home ============================================
 
+#home{
+  #intro{
+    .section-cell{
+      display: table-cell;
+      height: 100%;
+      vertical-align: middle;
+
+      background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/intro.jpg);
+    }
+    .content{
+      p{
+        @include font-size(1.1);
+        @include line-height(2.3);
+        color: $white;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 12px;
+      }
+    }
+  }
+}
+
 // ===== Who we are? =====================================
+#who_we_are {
+  background-color: blue;
+}
 
 // ===== Service =========================================
 
@@ -339,67 +403,105 @@ body {
   }
 }
 
-/* Extra small devices (phones, less than 768px) */
+/* Ultra small devices (phones, less than 480px) */
+/* Extra small devices (tablets, 480px and up) */
+@media (min-width: 480px) {
+  $gutter: 10px;
+  $baseFontSize: 16;
+  $baseLineHeight: 1.3;
+  html {
+    font-size: $baseFontSize + px;
+  }
+  @mixin font-size($sizeValue){
+    font-size: ($sizeValue * $baseFontSize) + px;
+    font-size: ($sizeValue) + rem;
+  }
+  @mixin line-height($LineHeight){
+    line-height: ($LineHeight * $baseFontSize * $baseLineHeight) + px;
+    line-height: ($LineHeight  * $baseLineHeight) + rem;
+  }
+
+  // ===== Home ============================================
+
+  #home{
+    .intro{
+      p{
+        @include font-size(1.3);
+        @include line-height(2.3);
+        letter-spacing: 20px;
+      }
+    }
+  }
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
   // ===== Objects ===========================================
   #header{
-    padding-bottom: $gutter * 3;
-    .brand{
-      padding-top: 40%;
-    }
-    .navbar{
-      margin-right: -20px;
-    }
-    nav{
-      float: right;
-      ul{
-        li{
-          border-bottom-color: $gray-4;
-          background-color: $white;
-          a,a:active,a:visited,a:hover,a:link,a:focus{
-            color: $gray-3;
+    .content{
+      padding-bottom: $gutter * 3;
+      .brand{
+        padding-top: 40%;
+      }
+      nav{
+        float: right;
+        ul{
+          li{
+            border-bottom-color: $gray-4;
+            background-color: $white;
+            a,a:active,a:visited,a:hover,a:link,a:focus{
+              color: $gray-3;
+            }
+          }
+          li+li{
+            border-bottom-color: $gray-3;
+          }
+          li+li+li{
+            border-bottom-color: $gray-2;
+          }
+          li+li+li+li{
+            border-bottom-color: $gray-1;
+            a,a:active,a:visited,a:hover,a:link,a:focus{
+              padding-right: $gutter * 2;
+            }
           }
         }
-        li+li{
-          border-bottom-color: $gray-3;
-        }
-        li+li+li{
-          border-bottom-color: $gray-2;
-        }
-        li+li+li+li{
-          border-bottom-color: $gray-1;
-          a,a:active,a:visited,a:hover,a:link,a:focus{
-            padding-right: $gutter * 2;
-          }
+        #transition-menu,
+        #transition-menu.show {
+          margin: 0;
+          padding: 0;
+          position: relative;
+          top: auto;
+          left: auto;
+          width:  auto;
         }
       }
-    }
-    button{
-      visibility: hidden;
-    }
-    .social_networks{
-      padding-top: 10%;
+      button{
+        visibility: hidden;
+      }
+      .social_networks{
+        padding-top: 10%;
+      }
     }
   }
-
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
   // ===== Objects ===========================================
-  #header{
+  #header {
     .brand{
       background-position: center 70%;
     }
     nav{
+      ul{
         li+li+li+li{
           a,a:active,a:visited,a:hover,a:link,a:focus{
             padding-right: $gutter * 6;
           }
         }
       }
+    }
     .social_networks{
       padding-top: 5%;
     }

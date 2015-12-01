@@ -1,20 +1,60 @@
 <?php get_header(); ?>
 
 <?php
-  $intro = get_field( 'intro' );
+  $intro = strtoupper( get_field( 'intro' ) );
 ?>
 
-<div class="section intro">
-  <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-      <img class="img-responsive"
-          src="<?php// echo get_template_directory_uri(); ?>/assets/img/que_ofrecemos/que_ofrecemos.svg"  alt="¿Qué ofrecemos?">
+    <div id="intro" class="section-row">
+      <div class="section-cell">
+
+        <div class="content">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-xs-12">
+                  <div>
+                    <p><?php echo $intro; ?></p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="col-xs-10 col-xs-offset-1">
-      <p><?php //echo get_field('que_ofrecemos'); ?></p>
+  </div><!-- section-table -->
+</div><!-- section -->
+
+<div id="who_we_are" class="section">
+
+  <div class="row">
+    <div class="col-xs-12">
+
     </div>
   </div>
+
 </div>
+
+<div id="service" class="section">
+
+  <div class="row">
+    <div class="col-xs-12">
+
+    </div>
+  </div>
+
+</div>
+
+<div id="contact_us" class="section">
+
+  <div class="row">
+    <div class="col-xs-12">
+
+    </div>
+  </div>
+
+</div>
+
 
 
 <?php get_footer(); ?>
