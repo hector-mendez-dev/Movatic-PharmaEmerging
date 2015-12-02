@@ -25,7 +25,9 @@ if (window.addEventListener) {                // For all major browsers, gte IE 
 }
 $( document ).ready(function() {
 	init();
-	$('#fullpage').fullpage();
+	$('#fullpage').fullpage({
+		scrollOverflow: true
+	});
 
 
 });

@@ -30,13 +30,11 @@
         <div id="header" class="section-row">
           <div class="section-cell">
 
-          <div class="content">
             <div class="container-fluid">
-
               <div class="row">
 
                 <div class="col-xs-12 col-sm-5 col-md-4">
-                  <a class="brand" title="PHARMA EMERGING" href="#Home"
+                  <a class="brand" title="PHARMA EMERGING" href="#home"
                   style="background-image: url( <?php echo get_template_directory_uri(); ?>/assets/img/pharma_emerging/logo.svg );">
                   </a>
                 </div>
@@ -97,8 +95,6 @@
 
               </div>
             </div>
-
-          </div>
 
         </div>
       </div>

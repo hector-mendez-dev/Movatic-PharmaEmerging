@@ -20,6 +20,16 @@ if ( !is_admin() ){
 			wp_enqueue_script( 'jquery' );
 		}
 
+		$conditional_polyfills = array(
+			'scriptPA' => '/js/html5shiv.min.js',
+			'scriptPB' => '/js/PIE.js'
+			);
+		foreach( $conditional_polyfills as $key=>$sc ){
+			wp_register_script( $key , get_template_directory_uri() . $sc , array(), null , false );
+			$wp_scripts->add_data( $key , 'conditional' , 'lt IE 9');
+			wp_enqueue_script( $key );
+		}
+
 		$conditional_polyfills_CDN = array(
 			'scriptP1' => 'http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js'
 			);
@@ -29,13 +39,16 @@ if ( !is_admin() ){
 			wp_enqueue_script( $key );
 		}
 
-		$conditional_polyfills = array(
-			'scriptPA' => '/js/html5shiv.min.js',
-			'scriptPB' => '/js/PIE.js'
+		$scripts = array(
+			'scriptA' => '/js/init.js',
+			'scriptB' => '/js/menuFixed.js',
+			'scriptC' => '/js/bumper.js',
+			'scriptD' => '/js/supportsSVG.js',
+			'scriptE' => '/js/slider.js',
+			'scriptF' => '/js/jquery.slimscroll.min.js'// Must load before fullPage.js
 			);
-		foreach( $conditional_polyfills as $key=>$sc ){
-			wp_register_script( $key , get_template_directory_uri() . $sc , array(), null , false );
-			$wp_scripts->add_data( $key , 'conditional' , 'lt IE 9');
+		foreach( $scripts as $key=>$sc ){
+			wp_register_script( $key , get_template_directory_uri() . $sc , array('jquery'));
 			wp_enqueue_script( $key );
 		}
 
@@ -47,18 +60,6 @@ if ( !is_admin() ){
 			);
 		foreach( $scripts_CDN as $key=>$sc ){
 			wp_register_script( $key , $sc , array('jquery'));
-			wp_enqueue_script( $key );
-		}
-
-		$scripts = array(
-			'scriptA' => '/js/init.js',
-			'scriptB' => '/js/menuFixed.js',
-			'scriptC' => '/js/bumper.js',
-			'scriptD' => '/js/supportsSVG.js',
-			'scriptE' => '/js/slider.js'
-			);
-		foreach( $scripts as $key=>$sc ){
-			wp_register_script( $key , get_template_directory_uri() . $sc , array('jquery'));
 			wp_enqueue_script( $key );
 		}
 	}
@@ -108,6 +109,35 @@ add_filter('upload_mimes','cc_mime_types');
 */
 
 
+function benefit_post_type() {
+	$labels = array(
+		'name'               => 'Alliance Benefits',
+		'singular_name'      => 'Benefit',
+		'all_items'          => 'all',
+		'add_new'            => 'Add New',
+		'add_new_item'       => 'Add New',
+		'edit_item'          => 'Edit',
+		'new_item'           => 'New',
+		'view_item'          => 'View',
+		'search_items'       => 'Search',
+		'not_found'          => 'Nothing found',
+		'not_found_in_trash' => 'Nothing found',
+		'parent_item_colon'  => ' ',
+		'menu_name'          => 'Alliance Benefits'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'Alliance Benefits',
+		'public'        => true,
+		'menu_position' => 6,
+		'menu_icon'     => 'dashicons-share-alt',
+		'supports'      => array(  'title' , 'page-attributes' ),
+		'has_archive'   => true
+	);
+	register_post_type( 'benefit', $args );
+}
+add_action( 'init', 'benefit_post_type' );
+
 function slide_post_type() {
 	$labels = array(
 		'name'               => 'Service Slides',
@@ -122,13 +152,13 @@ function slide_post_type() {
 		'not_found'          => 'Nothing found',
 		'not_found_in_trash' => 'Nothing found',
 		'parent_item_colon'  => ' ',
-		'menu_name'          => 'Slides'
+		'menu_name'          => 'Service Slides'
 	);
 	$args = array(
 		'labels'        => $labels,
 		'description'   => 'Service Slides',
 		'public'        => true,
-		'menu_position' => 6,
+		'menu_position' => 7,
 		'menu_icon'     => 'dashicons-image-flip-horizontal',
 		'supports'      => array(  'title'  ),
 		'has_archive'   => true
