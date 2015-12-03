@@ -33,7 +33,7 @@ $menu_item-active: #fff;
 $icon_bar: $blue-2;
 
 // ===== Scales ==========================================
-$gutter: 8px;
+$gutter: 10px;
 $baseFontSize: 14;
 $baseLineHeight: 1.3;
 html {
@@ -427,31 +427,45 @@ body {
 // ===== Who we are? =====================================
 #who_we_are {
   background-color: $white;
-  background-image:
-    url("assets/img/background/floating_left_panel.svg"),
-    url("assets/img/background/floating_right_panel.svg");
-  background-repeat: no-repeat;
-  background-position: -80%, 170% 50%;
-  background-size: 40%, 50%;
-
   .intro {
     h1 {
       font-weight: 100;
     }
   }
   .alliance{
-    background-image:
-      url("assets/img/background/floating_left_panel.svg"),
-      url("assets/img/background/floating_right_panel.svg"),
-      url("assets/img/background/alliance.jpg");
+    background-image: url("assets/img/background/alliance.jpg");
     background-repeat: no-repeat;
-    background-position: -40%, 170% -50%, center;
-    background-size: 40%, 50%, cover;
+    background-position: center;
+    background-size: cover;
+    h2 {
+      text-align: center;
+    }
     h2, p {
       color: $white;
     }
     .benefit {
       padding: $gutter;
+    }
+    .floating_panels {
+      position: relative;
+      .left {
+        margin-top: -315px;
+        padding-top: 360px;
+        position: absolute;
+        background-image: url("assets/img/background/floating_left_panel.svg");
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: cover;
+      }
+      .right {
+        margin-top: -255px;
+        padding-top: 310px;
+        position: absolute;
+        background-image: url("assets/img/background/floating_right_panel.svg");
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover;
+      }
     }
   }
 }
@@ -539,7 +553,7 @@ body {
 
   // ===== Objects ===========================================
   .content{
-    padding: ($gutter * 8) ($gutter * 4);
+    padding: ($gutter * 8) (16.6666%);
   }
 
   // ===== Home ============================================
@@ -557,9 +571,15 @@ body {
 @media (min-width: 768px) {
 
   // ===== Objects ===========================================
+  .content{
+    padding: ($gutter * 8) ($gutter * 4);
+  }
   #header {
     .container-fluid{
       padding-bottom: $gutter * 3;
+      .content{
+        padding: 0 $gutter;
+      }
     }
     .brand {
       padding-top: 40%;
@@ -575,6 +595,7 @@ body {
           background-color: $white;
           a, a:active, a:visited, a:hover, a:link, a:focus {
             color: $gray-3;
+            padding: 20px 30px;
           }
         }
         li+li {
@@ -607,6 +628,25 @@ body {
       padding-top: 10%;
     }
   }
+
+  // ===== Who we are? =====================================
+  #who_we_are {
+    .alliance{
+      .floating_panels {
+        position: relative;
+        .left {
+          margin-top: -300px;
+          padding-top: 360px;
+        }
+        .right {
+          margin-top: -320px;
+          padding-top: 560px;
+
+        }
+      }
+    }
+  }
+
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -618,6 +658,11 @@ body {
     }
     nav {
       ul {
+        li {
+          a, a:active, a:visited, a:hover, a:link, a:focus {
+            padding: 20px 13px;
+          }
+        }
         li+li+li+li {
           a, a:active, a:visited, a:hover, a:link, a:focus {
             padding-right: $gutter * 6;
@@ -633,4 +678,40 @@ body {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+  // ===== Objects ===========================================
+  #header {
+    .brand {
+      background-position: center 70%;
+    }
+    nav {
+      ul {
+        li {
+          a, a:active, a:visited, a:hover, a:link, a:focus {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // ===== Who we are? =====================================
+  #who_we_are {
+    .alliance{
+      h2 {
+        text-align: left;
+      }
+      .floating_panels {
+        position: relative;
+        .left {
+          margin-top: -300px;
+          padding-top: 350px;
+        }
+        .right {
+          margin-top: -320px;
+          padding-top: 630px;
+
+        }
+      }
+    }
+  }
 }

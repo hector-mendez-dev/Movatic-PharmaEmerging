@@ -31,68 +31,70 @@
           <div class="section-cell">
 
             <div class="container-fluid">
-              <div class="row">
+              <div class="content">
+                <div class="row">
 
-                <div class="col-xs-12 col-sm-5 col-md-4">
-                  <a class="brand" title="PHARMA EMERGING" href="#home"
-                  style="background-image: url( <?php echo get_template_directory_uri(); ?>/assets/img/pharma_emerging/logo.svg );">
-                  </a>
-                </div>
-
-                <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0 col-md-8">
-                  <div class="row buttons social_networks">
-
-                    <div class="col-xs-3 col-sm-6 col-md-9 button_item">
-                      <button type="button" onclick="toogleMenu();">
-                        <span class="sr-only">toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                    </div>
-                    <div class="col-xs-3 col-sm-2 col-md-1 button_item">
-                      <a href="<?php //the_field('twitter', 30 );?>" target="_blank">
-                        <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/twitter.svg );">
-                        </div>
-                      </a>
-                    </div>
-                    <div class="col-xs-3 col-sm-2 col-md-1 button_item">
-                      <a href="<?php //the_field('instagram', 30 );?>" target="_blank">
-                        <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/instagram.svg );">
-                        </div>
-                      </a>
-                    </div>
-                    <div class="col-xs-3 col-sm-2 col-md-1 button_item">
-                      <a href="<?php //the_field('facebook', 30 );?>" target="_blank">
-                        <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/facebook.svg );">
-                        </div>
-                      </a>
-                    </div>
-
+                  <div class="col-xs-12 col-sm-5 col-md-4">
+                    <a class="brand" title="PHARMA EMERGING" href="#home"
+                    style="background-image: url( <?php echo get_template_directory_uri(); ?>/assets/img/pharma_emerging/logo.svg );">
+                    </a>
                   </div>
-                </div>
 
-                <div class="col-xs-12 col-md-8">
-                  <nav class="navbar navbar-default">
+                  <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0 col-md-8">
+                    <div class="row buttons social_networks">
 
-                    <div class="" id="transition-menu">
-                      <ul class="nav navbar-nav">
-                        <li data-menuanchor="home">
-                          <a href="#home" onclick="toogleMenu();">HOME</a></li>
-                        <li data-menuanchor="who_we_are">
-                          <a href="#who_we_are" onclick="toogleMenu();">WHO WE ARE?</a></li>
-                        <li data-menuanchor="service">
-                          <a href="#service" onclick="toogleMenu();">SERVICE</a></li>
-                        <li data-menuanchor="contact_us">
-                          <a href="#contact_us" onclick="toogleMenu();">CONTACT US</a></li>
-                      </ul>
+                      <div class="col-xs-3 col-sm-6 col-md-9 button_item">
+                        <button type="button" onclick="toogleMenu();">
+                          <span class="sr-only">toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                      </div>
+                      <div class="col-xs-3 col-sm-2 col-md-1 button_item">
+                        <a href="<?php //the_field('twitter', 30 );?>" target="_blank">
+                          <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/twitter.svg );">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-xs-3 col-sm-2 col-md-1 button_item">
+                        <a href="<?php //the_field('instagram', 30 );?>" target="_blank">
+                          <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/instagram.svg );">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-xs-3 col-sm-2 col-md-1 button_item">
+                        <a href="<?php //the_field('facebook', 30 );?>" target="_blank">
+                          <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/facebook.svg );">
+                          </div>
+                        </a>
+                      </div>
+
                     </div>
-                    <!-- Collapse -->
+                  </div>
 
-                  </nav>
+                  <div class="col-xs-12 col-md-8">
+                    <nav class="navbar navbar-default">
+
+                      <div class="" id="transition-menu">
+                        <ul class="nav navbar-nav">
+                          <li data-menuanchor="home">
+                            <a href="#home" onclick="toogleMenu();">HOME</a></li>
+                          <li data-menuanchor="who_we_are">
+                            <a href="#who_we_are" onclick="toogleMenu();">WHO WE ARE?</a></li>
+                          <li data-menuanchor="service">
+                            <a href="#service" onclick="toogleMenu();">SERVICE</a></li>
+                          <li data-menuanchor="contact_us">
+                            <a href="#contact_us" onclick="toogleMenu();">CONTACT US</a></li>
+                        </ul>
+                      </div>
+                      <!-- Collapse -->
+
+                    </nav>
+                  </div>
+
+
                 </div>
-
-
               </div>
             </div>
 
