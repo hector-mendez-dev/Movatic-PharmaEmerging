@@ -109,6 +109,35 @@ add_filter('upload_mimes','cc_mime_types');
 */
 
 
+function sv_item_post_type() {
+	$labels = array(
+		'name'               => 'Service and Added Values',
+		'singular_name'      => 'Service and Added Value',
+		'all_items'          => 'all',
+		'add_new'            => 'Add New',
+		'add_new_item'       => 'Add New',
+		'edit_item'          => 'Edit',
+		'new_item'           => 'New',
+		'view_item'          => 'View',
+		'search_items'       => 'Search',
+		'not_found'          => 'Nothing found',
+		'not_found_in_trash' => 'Nothing found',
+		'parent_item_colon'  => ' ',
+		'menu_name'          => 'Service and Added Values'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'Service and Added Values',
+		'public'        => true,
+		'menu_position' => 6,
+		'menu_icon'     => 'dashicons-screenoptions',
+		'supports'      => array(  'title' , 'page-attributes' ),
+		'has_archive'   => true
+	);
+	register_post_type( 'sv_item', $args );
+}
+add_action( 'init', 'sv_item_post_type' );
+
 function benefit_post_type() {
 	$labels = array(
 		'name'               => 'Alliance Benefits',

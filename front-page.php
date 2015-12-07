@@ -61,7 +61,7 @@
               </div>
 
               <?php
-                $loop = new WP_Query( array(
+                $loop_benefit = new WP_Query( array(
                   'post_type' => 'benefit',
                   'posts_per_page' => -1,
                   'orderby' => 'menu_order',
@@ -69,7 +69,7 @@
                 ) );
               ?>
               <?php
-                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                while ( $loop_benefit->have_posts() ) : $loop_benefit->the_post(); ?>
               <?php
                 $benefit = get_field( 'benefit' );
               ?>
@@ -84,6 +84,56 @@
               <?php endwhile; wp_reset_query(); ?>
 
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service_value">
+      <div class="container-fluid">
+        <div class="pic">
+        </div>
+
+        <div class="sv_items">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="content">
+                <h2>SERVICE AND ADDED VALUE</h2>
+              </div>
+            </div>
+
+            <?php
+              $loop_sv_item = new WP_Query( array(
+                'post_type' => 'sv_item',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC'
+              ) );
+            ?>
+            <?php
+              while ( $loop_sv_item->have_posts() ) : $loop_sv_item->the_post(); ?>
+            <?php
+              $sv_item_icon = get_field( 'sv_item_icon' );
+              $sv_item_text = get_field( 'sv_item_text' );
+            ?>
+
+            <div class="col-xs-12 col-sm-6 col-lg-5 col-lg-offset-1">
+              <div class="sh sv_item">
+                <div class="circle"></div>
+                <div class="content">
+                  <div class="icon"
+                    style="background-image: url(<?php echo $sv_item_icon; ?>); ">
+                  </div>
+                  <div class="text">
+                    <p><?php echo $sv_item_text; ?></p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <?php endwhile; wp_reset_query(); ?>
+
           </div>
         </div>
       </div>

@@ -79,6 +79,7 @@ h1 {
   font-size: 3rem;
   line-height: 54.6px;
   line-height: 3.9rem;
+  font-weight: 100;
   color: #c6c6c6;
   letter-spacing: 16px;
   margin: 0; }
@@ -92,6 +93,7 @@ h2 {
   font-size: 2rem;
   line-height: 36.4px;
   line-height: 2.6rem;
+  font-weight: 600;
   color: #5b5b5f;
   letter-spacing: 12px;
   margin: 0; }
@@ -349,8 +351,6 @@ body {
 
 #who_we_are {
   background-color: #fff; }
-  #who_we_are .intro h1 {
-    font-weight: 100; }
   #who_we_are .alliance {
     background-image: url("assets/img/background/alliance.jpg");
     background-repeat: no-repeat;
@@ -380,6 +380,38 @@ body {
         background-repeat: no-repeat;
         background-position: center left;
         background-size: cover; }
+  #who_we_are .service_value .pic {
+    padding-top: 490px;
+    background-image: url("assets/img/background/floating_left_panel.svg"), url("assets/img/background/s_a_value.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  #who_we_are .service_value .sv_items h2, #who_we_are .service_value .sv_items p {
+    color: #5b5b5f;
+    text-align: center; }
+  #who_we_are .service_value .sv_items .sv_item {
+    position: relative;
+    border-top: 1px solid #c6c6c6; }
+    #who_we_are .service_value .sv_items .sv_item .circle {
+      position: absolute;
+      padding-top: 22px;
+      top: -11px;
+      left: 0;
+      right: 0;
+      background-image: url("assets/img/who/circle.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+    #who_we_are .service_value .sv_items .sv_item .content {
+      padding: 10px 50px; }
+      #who_we_are .service_value .sv_items .sv_item .content .icon {
+        margin: 20px;
+        padding-top: 30%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain; }
+      #who_we_are .service_value .sv_items .sv_item .content .text {
+        margin: 20px; }
 
 #service {
   background-color: blue; }
