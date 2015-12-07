@@ -29,25 +29,32 @@
 <div id="who_we_are" class="section">
   <div class="container-fluid">
 
-      <div class="intro content">
-        <div class="row">
-          <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-            <div class="row">
-              <div class="col-xs-12">
-                <h1>WHO WE ARE?</h1>
-              </div>
-              <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                <p class="ruler"></p>
-                <p><?php echo $who_we_are; ?></p>
-              </div>
+    <div class="intro content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+              <h1>WHO WE ARE?</h1>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-7 col-lg-offset-3">
+              <p class="ruler"></p>
+              <p><?php echo $who_we_are; ?></p>
             </div>
           </div>
         </div>
-
       </div>
-      <div class="alliance content">
+
+    </div>
+    <div class="alliance">
+      <div class="row floating_panels">
+        <div class="left col-xs-1 col-sm-2 col-lg-3">
+        </div>
+        <div class="right col-xs-3 col-xs-offset-9 col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9">
+        </div>
+      </div>
+      <div class="content">
         <div class="row">
-          <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
             <div class="row">
               <div class="col-xs-12">
                 <h2>ALLIANCE</h2>
@@ -67,19 +74,20 @@
                 $benefit = get_field( 'benefit' );
               ?>
 
-              <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-6 col-lg-5 col-lg-offset-1">
                 <div class="sh benefit">
                   <p class="ruler"></p>
                   <p><?php echo $benefit; ?></p>
                 </div>
               </div>
 
-            <?php endwhile; wp_reset_query(); ?>
+              <?php endwhile; wp_reset_query(); ?>
 
             </div>
           </div>
         </div>
       </div>
+    </div>
 
   </div>
 </div>

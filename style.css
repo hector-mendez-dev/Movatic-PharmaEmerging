@@ -15,8 +15,8 @@ html {
   padding: 0; }
 
 .row {
-  margin-right: -8px;
-  margin-left: -8px; }
+  margin-right: -10px;
+  margin-left: -10px; }
   .row .col-lg-1,
   .row .col-lg-10,
   .row .col-lg-11,
@@ -67,8 +67,8 @@ html {
   .row .col-xs-9 {
     position: relative;
     min-height: 0;
-    padding-right: 8px;
-    padding-left: 8px; }
+    padding-right: 10px;
+    padding-left: 10px; }
 
 h1 {
   font-family: 'Open Sans', sans-serif;
@@ -136,7 +136,7 @@ body {
       display: table-cell; }
 
 .content {
-  padding: 64px 16px; }
+  padding: 80px 20px; }
 
 #header {
   position: relative;
@@ -184,7 +184,7 @@ body {
   height: 0;
   display: none; }
 .form-content .field-wrap {
-  margin-bottom: 2.66667px;
+  margin-bottom: 3.33333px;
   background-color: #fff; }
 .form-content .textarea-wrap textarea {
   height: 88px;
@@ -348,22 +348,38 @@ body {
   letter-spacing: 12px; }
 
 #who_we_are {
-  background-color: #fff;
-  background-image: url("assets/img/background/floating_left_panel.svg"), url("assets/img/background/floating_right_panel.svg");
-  background-repeat: no-repeat;
-  background-position: -80%, 170% 50%;
-  background-size: 40%, 50%; }
+  background-color: #fff; }
   #who_we_are .intro h1 {
     font-weight: 100; }
   #who_we_are .alliance {
-    background-image: url("assets/img/background/floating_left_panel.svg"), url("assets/img/background/floating_right_panel.svg"), url("assets/img/background/alliance.jpg");
+    background-image: url("assets/img/background/alliance.jpg");
     background-repeat: no-repeat;
-    background-position: -40%, 170% -50%, center;
-    background-size: 40%, 50%, cover; }
+    background-position: center;
+    background-size: cover; }
+    #who_we_are .alliance h2 {
+      text-align: center; }
     #who_we_are .alliance h2, #who_we_are .alliance p {
       color: #fff; }
     #who_we_are .alliance .benefit {
-      padding: 8px; }
+      padding: 10px; }
+    #who_we_are .alliance .floating_panels {
+      position: relative; }
+      #who_we_are .alliance .floating_panels .left {
+        margin-top: -315px;
+        padding-top: 360px;
+        position: absolute;
+        background-image: url("assets/img/background/floating_left_panel.svg");
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: cover; }
+      #who_we_are .alliance .floating_panels .right {
+        margin-top: -255px;
+        padding-top: 310px;
+        position: absolute;
+        background-image: url("assets/img/background/floating_right_panel.svg");
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover; }
 
 #service {
   background-color: blue; }
@@ -377,7 +393,7 @@ body {
   background-clip: content-box;
   background-size: contain; }
   .page_404 .background img {
-    padding: 24px 8px; }
+    padding: 30px 10px; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
@@ -436,7 +452,7 @@ body {
     margin: 0; }
 
   .content {
-    padding: 64px 32px; }
+    padding: 80px 16.6666%; }
 
   #home .intro p {
     font-size: 20.8px;
@@ -446,19 +462,25 @@ body {
     letter-spacing: 20px; } }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .content {
+    padding: 80px 40px; }
+
   #header .container-fluid {
-    padding-bottom: 24px; }
+    padding-bottom: 30px; }
+    #header .container-fluid .content {
+      padding: 0 10px; }
   #header .brand {
     padding-top: 40%; }
   #header .navbar {
-    margin-right: -8px; }
+    margin-right: -10px; }
   #header nav {
     float: right; }
     #header nav ul li {
       border-bottom-color: #c6c6c6;
       background-color: #fff; }
       #header nav ul li a, #header nav ul li a:active, #header nav ul li a:visited, #header nav ul li a:hover, #header nav ul li a:link, #header nav ul li a:focus {
-        color: #9a999e; }
+        color: #9a999e;
+        padding: 20px 30px; }
     #header nav ul li + li {
       border-bottom-color: #9a999e; }
     #header nav ul li + li + li {
@@ -466,7 +488,7 @@ body {
     #header nav ul li + li + li + li {
       border-bottom-color: #5b5b5f; }
       #header nav ul li + li + li + li a, #header nav ul li + li + li + li a:active, #header nav ul li + li + li + li a:visited, #header nav ul li + li + li + li a:hover, #header nav ul li + li + li + li a:link, #header nav ul li + li + li + li a:focus {
-        padding-right: 16px; }
+        padding-right: 20px; }
     #header nav #transition-menu,
     #header nav #transition-menu.show {
       margin: 0;
@@ -478,15 +500,42 @@ body {
   #header button {
     visibility: hidden; }
   #header .social_networks {
-    padding-top: 10%; } }
+    padding-top: 10%; }
+
+  #who_we_are .alliance .floating_panels {
+    position: relative; }
+    #who_we_are .alliance .floating_panels .left {
+      margin-top: -300px;
+      padding-top: 360px; }
+    #who_we_are .alliance .floating_panels .right {
+      margin-top: -320px;
+      padding-top: 560px; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   #header .brand {
     background-position: center 70%; }
+  #header nav ul li a, #header nav ul li a:active, #header nav ul li a:visited, #header nav ul li a:hover, #header nav ul li a:link, #header nav ul li a:focus {
+    padding: 20px 13px; }
   #header nav ul li + li + li + li a, #header nav ul li + li + li + li a:active, #header nav ul li + li + li + li a:visited, #header nav ul li + li + li + li a:hover, #header nav ul li + li + li + li a:link, #header nav ul li + li + li + li a:focus {
-    padding-right: 48px; }
+    padding-right: 60px; }
   #header .social_networks {
     padding-top: 5%; } }
 /* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #header .brand {
+    background-position: center 70%; }
+  #header nav ul li a, #header nav ul li a:active, #header nav ul li a:visited, #header nav ul li a:hover, #header nav ul li a:link, #header nav ul li a:focus {
+    padding: 20px; }
+
+  #who_we_are .alliance h2 {
+    text-align: left; }
+  #who_we_are .alliance .floating_panels {
+    position: relative; }
+    #who_we_are .alliance .floating_panels .left {
+      margin-top: -300px;
+      padding-top: 350px; }
+    #who_we_are .alliance .floating_panels .right {
+      margin-top: -320px;
+      padding-top: 630px; } }
 
 /*# sourceMappingURL=style.css.map */
