@@ -101,39 +101,45 @@
                 <h2>SERVICE AND ADDED VALUE</h2>
               </div>
             </div>
+            <div class="col-xs-12">
+              <div class="items_list">
+                <div class="row">
 
-            <?php
-              $loop_sv_item = new WP_Query( array(
-                'post_type' => 'sv_item',
-                'posts_per_page' => -1,
-                'orderby' => 'menu_order',
-                'order' => 'ASC'
-              ) );
-            ?>
-            <?php
-              while ( $loop_sv_item->have_posts() ) : $loop_sv_item->the_post(); ?>
-            <?php
-              $sv_item_icon = get_field( 'sv_item_icon' );
-              $sv_item_text = get_field( 'sv_item_text' );
-            ?>
+              <?php
+                $loop_sv_item = new WP_Query( array(
+                  'post_type' => 'sv_item',
+                  'posts_per_page' => -1,
+                  'orderby' => 'menu_order',
+                  'order' => 'ASC'
+                ) );
+              ?>
+              <?php
+                while ( $loop_sv_item->have_posts() ) : $loop_sv_item->the_post(); ?>
+              <?php
+                $sv_item_icon = get_field( 'sv_item_icon' );
+                $sv_item_text = get_field( 'sv_item_text' );
+              ?>
 
-            <div class="col-xs-12 col-sm-6 col-lg-5 col-lg-offset-1">
-              <div class="sh sv_item">
-                <div class="circle"></div>
-                <div class="content">
-                  <div class="icon"
-                    style="background-image: url(<?php echo $sv_item_icon; ?>); ">
+              <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="sh sv_item">
+                  <div class="circle"></div>
+                  <div class="content">
+                    <div class="icon"
+                      style="background-image: url(<?php echo $sv_item_icon; ?>); ">
+                    </div>
+                    <div class="text">
+                      <p><?php echo $sv_item_text; ?></p>
+                    </div>
+
                   </div>
-                  <div class="text">
-                    <p><?php echo $sv_item_text; ?></p>
-                  </div>
+                </div>
+              </div>
+
+              <?php endwhile; wp_reset_query(); ?>
 
                 </div>
               </div>
             </div>
-
-            <?php endwhile; wp_reset_query(); ?>
-
           </div>
         </div>
       </div>
@@ -144,12 +150,57 @@
 
 <div id="service" class="section">
 
-  <div class="row">
-    <div class="col-xs-12">
+  <div class="service_product section-table">
+    <div class="section-row">
+      <div class="section-cell">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="content">
+                <h1>SERVICE PRODUCTS</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cell">
+        <div class="row">
+          <div class="col-xs-12">
 
+
+  <?php
+    $loop_slide = new WP_Query( array(
+      'post_type' => 'slide',
+      'posts_per_page' => -1,
+      'orderby' => 'menu_order',
+      'order' => 'ASC'
+    ) );
+  ?>
+  <?php
+    while ( $loop_slide->have_posts() ) : $loop_slide->the_post(); ?>
+  <?php
+    $title = get_field( 'title' );
+    $content = get_field( 'content' );
+  ?>
+
+  <div class="slide">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="content">
+          <p class="title"><?php echo $title; ?></p>
+          <div><?php echo $content; ?></div>
+        </div>
+      </div>
     </div>
   </div>
 
+<?php endwhile; wp_reset_query(); ?>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="contact_us" class="section">

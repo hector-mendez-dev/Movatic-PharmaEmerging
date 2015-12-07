@@ -11,9 +11,7 @@ Version: 1.0
 // ===== Mixings
 @mixin font-Open_Sans {
   font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
   font-style: normal;
-  letter-spacing: 1px;
 }
 
 // ===== Palette ===========================================
@@ -298,6 +296,12 @@ body {
 }
 #header {
   background-color: $white;
+  .container-fluid{
+    padding-bottom: 0;
+    .content{
+      padding: 0;
+    }
+  }
   nav {
     ul {
       list-style-type: none;
@@ -480,31 +484,35 @@ body {
         color: $gray-1;
         text-align: center;
       }
-      .sv_item {
-        position: relative;
-        border-top: 1px solid $gray-4;
-        .circle {
-          position: absolute;
-          padding-top: 22px;
-          top: -11px;
-          left: 0;
-          right: 0;
-          background-image: url("assets/img/who/circle.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-        }
-        .content {
-          padding: ($gutter) ($gutter * 5);
-          .icon {
-            margin: $gutter * 2 ;
-            padding-top: 30%;
+      .items_list {
+        padding: 0 $gutter;
+        .sv_item {
+          margin: 0 (-($gutter));
+          position: relative;
+          border-top: 1px solid $gray-4;
+          .circle {
+            position: absolute;
+            padding-top: 14px;
+            top: -7px;
+            left: 0;
+            right: 0;
+            background-image: url("assets/img/who/circle.svg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
           }
-          .text {
-            margin: $gutter * 2 ;
+          .content {
+            padding: ($gutter) ($gutter * 5);
+            .icon {
+              margin: $gutter * 2 ;
+              padding-top: 30%;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+            }
+            .text {
+              margin: $gutter * 2 ;
+            }
           }
         }
       }
@@ -514,9 +522,31 @@ body {
 
 // ===== Service =========================================
 #service {
-  background-color: blue;
+  .service_product {
+    background-image: url("assets/img/background/service.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    h1, p {
+      color: $white;
+      text-align: center;
+    }
+    .slide {
+      .content {
+        .title {
+          @include font-size(1);
+          @include line-height(2.3);
+          font-weight: bold;
+          letter-spacing: 12px;
+        }
+      }
+    }
+  }
 }
 // ===== Contact us ======================================
+#contact_us {
+  background-color: blue;
+}
 .contact {
   .form {
 
@@ -608,6 +638,19 @@ body {
       }
     }
   }
+
+  // ===== Who we are? =====================================
+  #who_we_are {
+    .service_value {
+      .sv_items {
+        .sv_item {
+          .content {
+            padding: ($gutter) ($gutter * 10);
+          }
+        }
+      }
+    }
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -687,8 +730,31 @@ body {
         }
       }
     }
-  }
+    .service_value {
+      .pic {
+        padding-top: 400px;
+      }
+      .sv_items {
+        .content {
+          padding: ($gutter * 8) ($gutter * 3);
 
+        }
+        .items_list {
+          .sv_item {
+            .content {
+              padding: ($gutter * 2) ($gutter * 5);
+              .icon {
+                padding-top: 26%;
+              }
+              .text {
+                margin: $gutter * 3 ;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -752,6 +818,30 @@ body {
           margin-top: -320px;
           padding-top: 630px;
 
+        }
+      }
+    }
+    .service_value {
+      .pic {
+        padding-top: 400px;
+      }
+      .sv_items {
+        .content {
+          padding: ($gutter * 8) ($gutter * 3);
+
+        }
+        .items_list {
+          .sv_item {
+            .content {
+              padding: ($gutter * 2) 0;
+              .icon {
+                padding-top: 26%;
+              }
+              .text {
+                margin: $gutter * 3 ;
+              }
+            }
+          }
         }
       }
     }

@@ -72,9 +72,7 @@ html {
 
 h1 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
   font-style: normal;
-  letter-spacing: 1px;
   font-size: 42px;
   font-size: 3rem;
   line-height: 54.6px;
@@ -86,9 +84,7 @@ h1 {
 
 h2 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
   font-style: normal;
-  letter-spacing: 1px;
   font-size: 28px;
   font-size: 2rem;
   line-height: 36.4px;
@@ -100,9 +96,7 @@ h2 {
 
 a, a:active, a:visited, a:hover, a:link, a:focus {
   font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
   font-style: normal;
-  letter-spacing: 1px;
   font-size: 14px;
   font-size: 1rem;
   line-height: 18.2px;
@@ -112,9 +106,7 @@ a, a:active, a:visited, a:hover, a:link, a:focus {
 
 p {
   font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
   font-style: normal;
-  letter-spacing: 1px;
   font-size: 15.4px;
   font-size: 1.1rem;
   line-height: 27.3px;
@@ -229,9 +221,7 @@ body {
   border-color: #000;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
   font-style: normal;
-  letter-spacing: 1px;
   width: 50%;
   margin-left: 25%;
   padding: 4px 16px; }
@@ -246,6 +236,10 @@ body {
 
 #header {
   background-color: #fff; }
+  #header .container-fluid {
+    padding-bottom: 0; }
+    #header .container-fluid .content {
+      padding: 0; }
   #header nav ul {
     list-style-type: none;
     margin: 0;
@@ -255,9 +249,7 @@ body {
       border-bottom: 1px solid #9a999e; }
       #header nav ul li a, #header nav ul li a:active, #header nav ul li a:visited, #header nav ul li a:hover, #header nav ul li a:link, #header nav ul li a:focus {
         font-family: 'Open Sans', sans-serif;
-        font-weight: normal;
         font-style: normal;
-        letter-spacing: 1px;
         font-size: 15.4px;
         font-size: 1.1rem;
         line-height: 20.02px;
@@ -389,31 +381,50 @@ body {
   #who_we_are .service_value .sv_items h2, #who_we_are .service_value .sv_items p {
     color: #5b5b5f;
     text-align: center; }
-  #who_we_are .service_value .sv_items .sv_item {
-    position: relative;
-    border-top: 1px solid #c6c6c6; }
-    #who_we_are .service_value .sv_items .sv_item .circle {
-      position: absolute;
-      padding-top: 22px;
-      top: -11px;
-      left: 0;
-      right: 0;
-      background-image: url("assets/img/who/circle.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain; }
-    #who_we_are .service_value .sv_items .sv_item .content {
-      padding: 10px 50px; }
-      #who_we_are .service_value .sv_items .sv_item .content .icon {
-        margin: 20px;
-        padding-top: 30%;
+  #who_we_are .service_value .sv_items .items_list {
+    padding: 0 10px; }
+    #who_we_are .service_value .sv_items .items_list .sv_item {
+      margin: 0 -10px;
+      position: relative;
+      border-top: 1px solid #c6c6c6; }
+      #who_we_are .service_value .sv_items .items_list .sv_item .circle {
+        position: absolute;
+        padding-top: 14px;
+        top: -7px;
+        left: 0;
+        right: 0;
+        background-image: url("assets/img/who/circle.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain; }
-      #who_we_are .service_value .sv_items .sv_item .content .text {
-        margin: 20px; }
+      #who_we_are .service_value .sv_items .items_list .sv_item .content {
+        padding: 10px 50px; }
+        #who_we_are .service_value .sv_items .items_list .sv_item .content .icon {
+          margin: 20px;
+          padding-top: 30%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        #who_we_are .service_value .sv_items .items_list .sv_item .content .text {
+          margin: 20px; }
 
-#service {
+#service .service_product {
+  background-image: url("assets/img/background/service.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  #service .service_product h1, #service .service_product p {
+    color: #fff;
+    text-align: center; }
+  #service .service_product .slide .content .title {
+    font-size: 14px;
+    font-size: 1rem;
+    line-height: 41.86px;
+    line-height: 2.99rem;
+    font-weight: bold;
+    letter-spacing: 12px; }
+
+#contact_us {
   background-color: blue; }
 
 .contact .data p {
@@ -435,9 +446,7 @@ body {
 
   h1 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
     font-style: normal;
-    letter-spacing: 1px;
     font-size: 48px;
     font-size: 3rem;
     line-height: 62.4px;
@@ -448,9 +457,7 @@ body {
 
   h2 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
     font-style: normal;
-    letter-spacing: 1px;
     font-size: 32px;
     font-size: 2rem;
     line-height: 41.6px;
@@ -461,9 +468,7 @@ body {
 
   a, a:active, a:visited, a:hover, a:link, a:focus {
     font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
     font-style: normal;
-    letter-spacing: 1px;
     font-size: 16px;
     font-size: 1rem;
     line-height: 20.8px;
@@ -473,9 +478,7 @@ body {
 
   p {
     font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
     font-style: normal;
-    letter-spacing: 1px;
     font-size: 17.6px;
     font-size: 1.1rem;
     line-height: 31.2px;
@@ -491,7 +494,10 @@ body {
     font-size: 1.3rem;
     line-height: 47.84px;
     line-height: 2.99rem;
-    letter-spacing: 20px; } }
+    letter-spacing: 20px; }
+
+  #who_we_are .service_value .sv_items .sv_item .content {
+    padding: 10px 100px; } }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .content {
@@ -541,7 +547,17 @@ body {
       padding-top: 360px; }
     #who_we_are .alliance .floating_panels .right {
       margin-top: -320px;
-      padding-top: 560px; } }
+      padding-top: 560px; }
+  #who_we_are .service_value .pic {
+    padding-top: 400px; }
+  #who_we_are .service_value .sv_items .content {
+    padding: 80px 30px; }
+  #who_we_are .service_value .sv_items .items_list .sv_item .content {
+    padding: 20px 50px; }
+    #who_we_are .service_value .sv_items .items_list .sv_item .content .icon {
+      padding-top: 26%; }
+    #who_we_are .service_value .sv_items .items_list .sv_item .content .text {
+      margin: 30px; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   #header .brand {
@@ -568,6 +584,16 @@ body {
       padding-top: 350px; }
     #who_we_are .alliance .floating_panels .right {
       margin-top: -320px;
-      padding-top: 630px; } }
+      padding-top: 630px; }
+  #who_we_are .service_value .pic {
+    padding-top: 400px; }
+  #who_we_are .service_value .sv_items .content {
+    padding: 80px 30px; }
+  #who_we_are .service_value .sv_items .items_list .sv_item .content {
+    padding: 20px 0; }
+    #who_we_are .service_value .sv_items .items_list .sv_item .content .icon {
+      padding-top: 26%; }
+    #who_we_are .service_value .sv_items .items_list .sv_item .content .text {
+      margin: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
