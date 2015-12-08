@@ -150,9 +150,11 @@
 
 <div id="service" class="section">
 
-  <div class="service_product section-table">
+  <div class="service_products section-table">
+
     <div class="section-row">
       <div class="section-cell">
+
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12">
@@ -162,45 +164,69 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="section-cell">
-        <div class="row">
-          <div class="col-xs-12">
 
-
-  <?php
-    $loop_slide = new WP_Query( array(
-      'post_type' => 'slide',
-      'posts_per_page' => -1,
-      'orderby' => 'menu_order',
-      'order' => 'ASC'
-    ) );
-  ?>
-  <?php
-    while ( $loop_slide->have_posts() ) : $loop_slide->the_post(); ?>
-  <?php
-    $title = get_field( 'title' );
-    $content = get_field( 'content' );
-  ?>
-
-  <div class="slide">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="content">
-          <p class="title"><?php echo $title; ?></p>
-          <div><?php echo $content; ?></div>
-        </div>
       </div>
     </div>
-  </div>
 
-<?php endwhile; wp_reset_query(); ?>
+    <div id="service-slider" class="section-row">
+      <div class="section-cell">
+        <div class="container-fluid">
 
+          <div class="row">
+            <div class="col-xs-12">
+              <div id="slider">
+                <div id="slider_index">
+                  <div class="index slide_button" >•</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="wrapper">
+                      <div class="row sp_slides">
+
+    <?php
+      $loop_slide = new WP_Query( array(
+        'post_type' => 'slide',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
+      ) );
+    ?>
+    <?php
+      while ( $loop_slide->have_posts() ) : $loop_slide->the_post(); ?>
+    <?php
+      $title = get_field( 'title' );
+      $content = get_field( 'content' );
+    ?>
+
+    <div class="col-xs-12 sp_slide">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="content">
+            <p class="title"><?php echo $title; ?></p>
+            <div class="text"><?php echo $content; ?></div>
           </div>
         </div>
       </div>
     </div>
+
+  <?php endwhile; wp_reset_query(); ?>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
+
 </div>
 
 <div id="contact_us" class="section">

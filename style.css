@@ -73,10 +73,10 @@ html {
 h1 {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
-  font-size: 42px;
-  font-size: 3rem;
-  line-height: 54.6px;
-  line-height: 3.9rem;
+  font-size: 32.2px;
+  font-size: 2.3rem;
+  line-height: 41.86px;
+  line-height: 2.99rem;
   font-weight: 100;
   color: #c6c6c6;
   letter-spacing: 16px;
@@ -85,10 +85,10 @@ h1 {
 h2 {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
-  font-size: 28px;
-  font-size: 2rem;
-  line-height: 36.4px;
-  line-height: 2.6rem;
+  font-size: 23.8px;
+  font-size: 1.7rem;
+  line-height: 30.94px;
+  line-height: 2.21rem;
   font-weight: 600;
   color: #5b5b5f;
   letter-spacing: 12px;
@@ -127,10 +127,11 @@ body {
   .section .section-table .section-row {
     display: table-row; }
     .section .section-table .section-row .section-cell {
-      display: table-cell; }
+      display: table-cell;
+      vertical-align: middle; }
 
 .content {
-  padding: 80px 20px; }
+  padding: 50px 10px; }
 
 #header {
   position: relative;
@@ -324,9 +325,7 @@ body {
       background-position: center; }
 
 #home #home-intro .section-cell {
-  display: table-cell;
   height: 100%;
-  vertical-align: middle;
   background-image: url("assets/img/background/floating_right_panel.svg"), url("assets/img/background/intro.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -408,21 +407,77 @@ body {
         #who_we_are .service_value .sv_items .items_list .sv_item .content .text {
           margin: 20px; }
 
-#service .service_product {
+#service .service_products {
   background-image: url("assets/img/background/service.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; }
-  #service .service_product h1, #service .service_product p {
+  background-size: cover;
+  /*Slider Control*/ }
+  #service .service_products h1, #service .service_products p {
     color: #fff;
     text-align: center; }
-  #service .service_product .slide .content .title {
-    font-size: 14px;
-    font-size: 1rem;
-    line-height: 41.86px;
-    line-height: 2.99rem;
-    font-weight: bold;
-    letter-spacing: 12px; }
+  #service .service_products #slide_prev {
+    position: absolute;
+    margin-left: 4px;
+    top: 50%;
+    left: 0;
+    margin-top: -53px; }
+  #service .service_products #slide_next {
+    position: absolute;
+    margin-right: 4px;
+    top: 50%;
+    right: 0;
+    margin-top: -53px; }
+  #service .service_products #service-slider {
+    height: 100%; }
+    #service .service_products #service-slider #slider {
+      position: relative; }
+      #service .service_products #service-slider #slider .slide_button {
+        /* Check set_index()*/
+        position: relative;
+        z-index: 88;
+        text-align: center;
+        color: #fff;
+        font-size: 56px;
+        font-size: 4rem;
+        line-height: 36.4px;
+        line-height: 2.6rem;
+        cursor: pointer;
+        display: block;
+        width: 34px;
+        height: 34px; }
+      #service .service_products #service-slider #slider .slide_button:hover {
+        opacity: 1 !important; }
+      #service .service_products #service-slider #slider #slider_index {
+        position: absolute;
+        display: table;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 5px;
+        bottom: 0; }
+        #service .service_products #service-slider #slider #slider_index .index {
+          cursor: pointer;
+          display: inline-block;
+          margin: 5px; }
+      #service .service_products #service-slider #slider .wrapper {
+        overflow: hidden; }
+        #service .service_products #service-slider #slider .wrapper .sp_slides {
+          display: block;
+          height: inherit;
+          margin: 0;
+          padding: 0; }
+          #service .service_products #service-slider #slider .wrapper .sp_slides .sp_slide .content {
+            padding-top: 0;
+            text-align: center; }
+            #service .service_products #service-slider #slider .wrapper .sp_slides .sp_slide .content .title {
+              font-size: 14px;
+              font-size: 1rem;
+              line-height: 36.4px;
+              line-height: 2.6rem;
+              font-weight: bold;
+              letter-spacing: 12px; }
+            #service .service_products #service-slider #slider .wrapper .sp_slides .sp_slide .content .text {
+              padding: 10px 0; }
 
 #contact_us {
   background-color: blue; }

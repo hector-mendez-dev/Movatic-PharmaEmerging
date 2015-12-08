@@ -113,8 +113,8 @@ html {
 h1 {
   //headings from navbar
   @include font-Open_Sans;
-  @include font-size(3);
-  @include line-height(3);
+  @include font-size(2.3);
+  @include line-height(2.3);
   font-weight: 100;
   color: $gray-4;
   letter-spacing: 16px;
@@ -123,8 +123,8 @@ h1 {
 h2 {
   //sub-headings
   @include font-Open_Sans;
-  @include font-size(2);
-  @include line-height(2);
+  @include font-size(1.7);
+  @include line-height(1.7);
   font-weight: 600;
   color: $gray-1;
   letter-spacing: 12px;
@@ -163,12 +163,13 @@ body {
       display: table-row;
       .section-cell {
         display: table-cell;
+        vertical-align: middle;
       }
     }
   }
 }
 .content{
-  padding: ($gutter * 8) ($gutter * 2);
+  padding: ($gutter * 5) ($gutter);
 }
 #header {
 
@@ -407,9 +408,7 @@ body {
 #home {
   #home-intro {
     .section-cell {
-      display: table-cell;
       height: 100%;
-      vertical-align: middle;
       background-image:
         url("assets/img/background/floating_right_panel.svg"),
         url("assets/img/background/intro.jpg");
@@ -522,7 +521,7 @@ body {
 
 // ===== Service =========================================
 #service {
-  .service_product {
+  .service_products {
     background-image: url("assets/img/background/service.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -531,13 +530,77 @@ body {
       color: $white;
       text-align: center;
     }
-    .slide {
-      .content {
-        .title {
-          @include font-size(1);
-          @include line-height(2.3);
-          font-weight: bold;
-          letter-spacing: 12px;
+    /*Slider Control*/
+    #slide_prev{
+      position: absolute;
+      margin-left: 4px;
+      top: 50%;
+      left: 0;
+      margin-top: -53px;
+    }
+    #slide_next{
+      position: absolute;
+      margin-right: 4px;
+      top: 50%;
+      right: 0;
+      margin-top: -53px;
+    }
+    #service-slider {
+      height: 100%;
+      #slider {
+      	position: relative;
+        .slide_button{/* Check set_index()*/
+        	position: relative;
+        	z-index: 88;
+
+          text-align: center;
+          color: $white;
+          @include font-size(4);
+          @include line-height(2);
+          cursor:  pointer;
+          display: block;
+          width: $xy-menu-button - 10px ;
+          height: $xy-menu-button - 10px ;
+        }
+        .slide_button:hover{
+        	opacity: 1 !important;
+        }
+        #slider_index{
+        	position: absolute;
+          display: table;
+          text-align: center;
+          width: 100%;
+        	margin-bottom: 5px;
+        	bottom: 0;
+          .index{
+          	cursor:  pointer;
+          	display: inline-block;
+          	margin: 5px;
+          }
+        }
+        .wrapper{
+          overflow: hidden;
+          .sp_slides {
+            display: block;
+            height: inherit;
+            margin: 0;
+            padding: 0;
+            .sp_slide {
+              .content {
+                padding-top:  0;
+                text-align: center;
+                .title {
+                  @include font-size(1);
+                  @include line-height(2);
+                  font-weight: bold;
+                  letter-spacing: 12px;
+                }
+                .text {
+                  padding: $gutter 0;
+                }
+              }
+            }
+          }
         }
       }
     }
