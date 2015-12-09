@@ -40,12 +40,11 @@ if ( !is_admin() ){
 		}
 
 		$scripts = array(
-			'scriptA' => '/js/init.js',
-			'scriptB' => '/js/menuFixed.js',
+			'scriptA' => '/js/jquery.slimscroll.min.js',// Must load before fullPage.js
 			'scriptC' => '/js/bumper.js',
 			'scriptD' => '/js/supportsSVG.js',
 			'scriptE' => '/js/slider.js',
-			'scriptF' => '/js/jquery.slimscroll.min.js'// Must load before fullPage.js
+			'scriptX' => '/js/init.js'
 			);
 		foreach( $scripts as $key=>$sc ){
 			wp_register_script( $key , get_template_directory_uri() . $sc , array('jquery'));

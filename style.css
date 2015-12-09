@@ -116,6 +116,16 @@ p {
 
 body {
   background-color: #a8a8a8; }
+  body #mask {
+    display: none; }
+  body #mask.show {
+    display: block;
+    position: absolute;
+    z-index: 887;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.07; }
 
 .wrapper {
   position: relative; }
@@ -133,36 +143,56 @@ body {
 .content {
   padding: 50px 10px; }
 
-#header {
+#header, #fixed-header {
   position: relative;
   left: 0;
   right: 0;
-  border: 0;
-  z-index: 888; }
+  border: 0; }
   #header .navbar,
   #header .navbar-default,
   #header .navbar-collapse,
   #header .navbar-default .navbar-toggle:focus,
-  #header .navbar-default .navbar-toggle:hover {
+  #header .navbar-default .navbar-toggle:hover, #fixed-header .navbar,
+  #fixed-header .navbar-default,
+  #fixed-header .navbar-collapse,
+  #fixed-header .navbar-default .navbar-toggle:focus,
+  #fixed-header .navbar-default .navbar-toggle:hover {
     background: none;
     border: none;
     border-radius: 0;
     margin: 0; }
-  #header .navbar {
-    min-height: 44px; }
-  #header .buttons button {
+  #header .navbar, #fixed-header .navbar {
+    min-height: 0; }
+  #header .buttons button, #fixed-header .buttons button {
     background: none;
     border: none;
     border-radius: 0; }
-  #header .buttons a, #header .buttons a:active, #header .buttons a:visited, #header .buttons a:hover, #header .buttons a:link, #header .buttons a:focus {
+  #header .buttons a, #header .buttons a:active, #header .buttons a:visited, #header .buttons a:hover, #header .buttons a:link, #header .buttons a:focus, #fixed-header .buttons a, #fixed-header .buttons a:active, #fixed-header .buttons a:visited, #fixed-header .buttons a:hover, #fixed-header .buttons a:link, #fixed-header .buttons a:focus {
     text-decoration: none; }
-  #header .buttons .button_item a {
+  #header .buttons .button_item a, #fixed-header .buttons .button_item a {
     display: inline-block; }
 
-#header.fixed {
+#fixed-header {
   position: fixed;
   margin-top: 0;
-  top: 0; }
+  top: -100%;
+  left: 0;
+  right: 0;
+  z-index: -1; }
+
+#fixed-header.fixed {
+  background-color: #e9f6f6;
+  top: 0;
+  z-index: 888;
+  -webkit-transition: top 0.35s ease;
+  -moz-transition: top 0.35s ease;
+  -o-transition: top 0.35s ease;
+  transition: top 0.35s ease; }
+
+.menu_spacer {
+  display: block;
+  left: 0;
+  right: 0; }
 
 .ruler::before {
   font-size: 21px;
@@ -174,59 +204,6 @@ body {
   content: "———";
   opacity: 0.4; }
 
-.form-content .hp-wrap {
-  visibility: hidden;
-  height: 0;
-  display: none; }
-.form-content .field-wrap {
-  margin-bottom: 3.33333px;
-  background-color: #fff; }
-.form-content .textarea-wrap textarea {
-  height: 88px;
-  min-width: 100%;
-  max-width: 100%; }
-.form-content .submit-wrap {
-  background: none; }
-.form-content .ninja-forms-field {
-  color: #87868a;
-  background-color: #fff;
-  border-width: 0;
-  border-color: none;
-  min-height: 44px;
-  padding: 12px 16px;
-  width: 100%; }
-.form-content .ninja-forms-response-msg,
-.form-content .ninja-forms-error-msg {
-  background: #000;
-  text-align: center;
-  padding: 0 12px;
-  margin-bottom: 5px;
-  opacity: 0.95; }
-  .form-content .ninja-forms-response-msg p,
-  .form-content .ninja-forms-error-msg p {
-    color: #fff; }
-.form-content .ninja-forms-success-msg {
-  background: #fff;
-  padding: 20px; }
-.form-content .ninja-forms-field-error {
-  color: #fff;
-  background-color: #000;
-  text-align: center;
-  padding: 0 12px;
-  opacity: 0.95; }
-.form-content #ninja_forms_field_16,
-.form-content #ninja_forms_field_7 {
-  background-color: #000;
-  background-clip: padding-box;
-  border: 8px solid transparent;
-  border-color: #000;
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-style: normal;
-  width: 50%;
-  margin-left: 25%;
-  padding: 4px 16px; }
-
 .brand {
   display: block;
   background-repeat: no-repeat;
@@ -235,20 +212,20 @@ body {
   width: 100%;
   padding-top: 40%; }
 
-#header {
+#header, #fixed-header {
   background-color: #fff; }
-  #header .container-fluid {
-    padding-bottom: 0; }
-    #header .container-fluid .content {
+  #header .container-fluid, #fixed-header .container-fluid {
+    padding-bottom: 30px; }
+    #header .container-fluid .content, #fixed-header .container-fluid .content {
       padding: 0; }
-  #header nav ul {
+  #header nav ul, #fixed-header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0; }
-    #header nav ul li {
+    #header nav ul li, #fixed-header nav ul li {
       background-color: #51b8bd;
       border-bottom: 1px solid #9a999e; }
-      #header nav ul li a, #header nav ul li a:active, #header nav ul li a:visited, #header nav ul li a:hover, #header nav ul li a:link, #header nav ul li a:focus {
+      #header nav ul li a, #header nav ul li a:active, #header nav ul li a:visited, #header nav ul li a:hover, #header nav ul li a:link, #header nav ul li a:focus, #fixed-header nav ul li a, #fixed-header nav ul li a:active, #fixed-header nav ul li a:visited, #fixed-header nav ul li a:hover, #fixed-header nav ul li a:link, #fixed-header nav ul li a:focus {
         font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-size: 15.4px;
@@ -258,7 +235,7 @@ body {
         color: #fff;
         letter-spacing: 5px;
         padding: 20px 30px 20px 40px; }
-  #header nav #transition-menu {
+  #header nav #transition-menu, #header nav #fixed-transition-menu, #fixed-header nav #transition-menu, #fixed-header nav #fixed-transition-menu {
     margin: 0;
     padding: 0;
     position: fixed;
@@ -266,39 +243,50 @@ body {
     left: -100%;
     margin-right: -100%;
     max-width: 100%;
-    -webkit-transition: left 1.35s ease;
-    -moz-transition: left 1.35s ease;
-    -o-transition: left 1.35s ease;
-    transition: left 1.35s ease; }
-  #header nav #transition-menu.show {
+    -webkit-transition: left 0.70s ease;
+    -moz-transition: left 0.70s ease;
+    -o-transition: left 0.70s ease;
+    transition: left 0.70s ease; }
+  #header nav #transition-menu.show, #header nav #fixed-transition-menu.show, #fixed-header nav #transition-menu.show, #fixed-header nav #fixed-transition-menu.show {
     left: 0;
-    -webkit-transition: left 1.35s ease;
-    -moz-transition: left 1.35s ease;
-    -o-transition: left 1.35s ease;
-    transition: left 1.35s ease; }
-  #header .buttons {
+    -webkit-transition: left 0.70s ease;
+    -moz-transition: left 0.70s ease;
+    -o-transition: left 0.70s ease;
+    transition: left 0.70s ease;
+    z-index: 8888; }
+  #header .buttons, #fixed-header .buttons {
     text-align: center; }
-    #header .buttons button {
+    #header .buttons button, #fixed-header .buttons button {
       height: 44px;
       width: 44px;
       padding: 9px 8px; }
-      #header .buttons button .icon-bar {
+      #header .buttons button .icon-bar, #fixed-header .buttons button .icon-bar {
         display: block;
         border-radius: 1px;
         background-color: #76c7cb;
         height: 4px;
         width: 28px; }
-      #header .buttons button .icon-bar + .icon-bar {
+      #header .buttons button .icon-bar + .icon-bar, #fixed-header .buttons button .icon-bar + .icon-bar {
         margin-top: 5px; }
-  #header .social_networks a {
+  #header .social_networks a, #fixed-header .social_networks a {
     padding: 5px 0;
     height: 44px;
     width: 44px; }
-    #header .social_networks a div {
+    #header .social_networks a div, #fixed-header .social_networks a div {
       height: 100%;
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain; }
+
+#fixed-header {
+  max-height: 44px; }
+  #fixed-header .container-fluid {
+    padding-bottom: 0;
+    margin-bottom: -4px; }
+    #fixed-header .container-fluid .content {
+      padding: 0; }
+  #fixed-header .social_networks a {
+    padding: 10px 0; }
 
 #footer {
   position: static;
@@ -416,18 +404,6 @@ body {
   #service .service_products h1, #service .service_products p {
     color: #fff;
     text-align: center; }
-  #service .service_products #slide_prev {
-    position: absolute;
-    margin-left: 4px;
-    top: 50%;
-    left: 0;
-    margin-top: -53px; }
-  #service .service_products #slide_next {
-    position: absolute;
-    margin-right: 4px;
-    top: 50%;
-    right: 0;
-    margin-top: -53px; }
   #service .service_products #service-slider {
     height: 100%; }
     #service .service_products #service-slider #slider {
@@ -435,7 +411,7 @@ body {
       #service .service_products #service-slider #slider .slide_button {
         /* Check set_index()*/
         position: relative;
-        z-index: 88;
+        z-index: 8;
         text-align: center;
         color: #fff;
         font-size: 56px;
@@ -480,11 +456,70 @@ body {
               padding: 10px 0; }
 
 #contact_us {
-  background-color: blue; }
-
-.contact .data p {
-  font-weight: bold;
-  text-align: center; }
+  background-image: url("assets/img/background/contact.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  #contact_us .contact .form .form-content .hp-wrap {
+    visibility: hidden;
+    height: 0;
+    display: none; }
+  #contact_us .contact .form .form-content .field-wrap {
+    margin-bottom: 3.33333px;
+    background-color: #fff; }
+  #contact_us .contact .form .form-content .textarea-wrap textarea {
+    height: 88px;
+    min-width: 100%;
+    max-width: 100%; }
+  #contact_us .contact .form .form-content .submit-wrap {
+    background: none; }
+  #contact_us .contact .form .form-content .ninja-forms-field {
+    color: #87868a;
+    background-color: #fff;
+    border-width: 0;
+    border-color: none;
+    min-height: 44px;
+    padding: 12px 16px;
+    width: 100%; }
+  #contact_us .contact .form .form-content .ninja-forms-response-msg,
+  #contact_us .contact .form .form-content .ninja-forms-error-msg {
+    background: #000;
+    text-align: center;
+    padding: 0 12px;
+    margin-bottom: 5px;
+    opacity: 0.95; }
+    #contact_us .contact .form .form-content .ninja-forms-response-msg p,
+    #contact_us .contact .form .form-content .ninja-forms-error-msg p {
+      color: #fff; }
+  #contact_us .contact .form .form-content .ninja-forms-success-msg {
+    background: #fff;
+    padding: 20px; }
+  #contact_us .contact .form .form-content .ninja-forms-field-error {
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 0 12px;
+    opacity: 0.95; }
+  #contact_us .contact .form .form-content #ninja_forms_field_16,
+  #contact_us .contact .form .form-content #ninja_forms_field_7 {
+    background-color: #000;
+    background-clip: padding-box;
+    border: 8px solid transparent;
+    border-color: #000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    width: 50%;
+    margin-left: 25%;
+    padding: 4px 16px; }
+  #contact_us .contact .data {
+    background-image: url("assets/img/background/floating_right_panel.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    #contact_us .contact .data p {
+      font-weight: bold;
+      text-align: center; }
 
 .page_404 .background {
   background-position: center;
@@ -558,42 +593,51 @@ body {
   .content {
     padding: 80px 40px; }
 
-  #header .container-fluid {
-    padding-bottom: 30px; }
-    #header .container-fluid .content {
-      padding: 0 10px; }
-  #header .brand {
+  #header .container-fluid .content, #fixed-header .container-fluid .content {
+    padding: 0 10px; }
+  #header .brand, #fixed-header .brand {
     padding-top: 40%; }
-  #header .navbar {
+  #header .navbar, #fixed-header .navbar {
     margin-right: -10px; }
-  #header nav {
+  #header nav, #fixed-header nav {
     float: right; }
-    #header nav ul li {
+    #header nav ul li, #fixed-header nav ul li {
       border-bottom-color: #c6c6c6;
       background-color: #fff; }
-      #header nav ul li a, #header nav ul li a:active, #header nav ul li a:visited, #header nav ul li a:hover, #header nav ul li a:link, #header nav ul li a:focus {
+      #header nav ul li a, #header nav ul li a:active, #header nav ul li a:visited, #header nav ul li a:hover, #header nav ul li a:link, #header nav ul li a:focus, #fixed-header nav ul li a, #fixed-header nav ul li a:active, #fixed-header nav ul li a:visited, #fixed-header nav ul li a:hover, #fixed-header nav ul li a:link, #fixed-header nav ul li a:focus {
         color: #9a999e;
         padding: 20px 30px; }
-    #header nav ul li + li {
+    #header nav ul li + li, #fixed-header nav ul li + li {
       border-bottom-color: #9a999e; }
-    #header nav ul li + li + li {
+    #header nav ul li + li + li, #fixed-header nav ul li + li + li {
       border-bottom-color: #87868a; }
-    #header nav ul li + li + li + li {
+    #header nav ul li + li + li + li, #fixed-header nav ul li + li + li + li {
       border-bottom-color: #5b5b5f; }
-      #header nav ul li + li + li + li a, #header nav ul li + li + li + li a:active, #header nav ul li + li + li + li a:visited, #header nav ul li + li + li + li a:hover, #header nav ul li + li + li + li a:link, #header nav ul li + li + li + li a:focus {
+      #header nav ul li + li + li + li a, #header nav ul li + li + li + li a:active, #header nav ul li + li + li + li a:visited, #header nav ul li + li + li + li a:hover, #header nav ul li + li + li + li a:link, #header nav ul li + li + li + li a:focus, #fixed-header nav ul li + li + li + li a, #fixed-header nav ul li + li + li + li a:active, #fixed-header nav ul li + li + li + li a:visited, #fixed-header nav ul li + li + li + li a:hover, #fixed-header nav ul li + li + li + li a:link, #fixed-header nav ul li + li + li + li a:focus {
         padding-right: 20px; }
     #header nav #transition-menu,
-    #header nav #transition-menu.show {
+    #header nav #transition-menu.show,
+    #header nav #fixed-transition-menu,
+    #header nav #fixed-transition-menu.show, #fixed-header nav #transition-menu,
+    #fixed-header nav #transition-menu.show,
+    #fixed-header nav #fixed-transition-menu,
+    #fixed-header nav #fixed-transition-menu.show {
       margin: 0;
       padding: 0;
       position: relative;
       top: auto;
       left: auto;
       width: auto; }
-  #header button {
+  #header button, #fixed-header button {
     visibility: hidden; }
-  #header .social_networks {
+  #header .social_networks, #fixed-header .social_networks {
     padding-top: 10%; }
+
+  #fixed-header .container-fluid {
+    padding-bottom: 0;
+    margin-bottom: -4px; }
+    #fixed-header .container-fluid .content {
+      padding: 0; }
 
   #who_we_are .alliance .floating_panels {
     position: relative; }

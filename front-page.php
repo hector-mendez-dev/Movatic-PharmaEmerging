@@ -28,6 +28,7 @@
 
 <div id="who_we_are" class="section">
   <div class="container-fluid">
+    <div class="menu_spacer"></div>
 
     <div class="intro content">
       <div class="row">
@@ -156,6 +157,8 @@
       <div class="section-cell">
 
         <div class="container-fluid">
+          <div class="menu_spacer"></div>
+
           <div class="row">
             <div class="col-xs-12">
               <div class="content">
@@ -184,33 +187,33 @@
                     <div class="wrapper">
                       <div class="row sp_slides">
 
-    <?php
-      $loop_slide = new WP_Query( array(
-        'post_type' => 'slide',
-        'posts_per_page' => -1,
-        'orderby' => 'menu_order',
-        'order' => 'ASC'
-      ) );
-    ?>
-    <?php
-      while ( $loop_slide->have_posts() ) : $loop_slide->the_post(); ?>
-    <?php
-      $title = get_field( 'title' );
-      $content = get_field( 'content' );
-    ?>
+      <?php
+        $loop_slide = new WP_Query( array(
+          'post_type' => 'slide',
+          'posts_per_page' => -1,
+          'orderby' => 'menu_order',
+          'order' => 'ASC'
+        ) );
+      ?>
+      <?php
+        while ( $loop_slide->have_posts() ) : $loop_slide->the_post(); ?>
+      <?php
+        $title = get_field( 'title' );
+        $content = get_field( 'content' );
+      ?>
 
-    <div class="col-xs-12 sp_slide">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="content">
-            <p class="title"><?php echo $title; ?></p>
-            <div class="text"><?php echo $content; ?></div>
+      <div class="col-xs-12 sp_slide">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="content">
+              <p class="title"><?php echo $title; ?></p>
+              <div class="text"><?php echo $content; ?></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-  <?php endwhile; wp_reset_query(); ?>
+      <?php endwhile; wp_reset_query(); ?>
 
                       </div>
                     </div>
@@ -230,9 +233,40 @@
 </div>
 
 <div id="contact_us" class="section">
+  <div class="contact">
+    <div class="container-fluid">
+      <div class="menu_spacer"></div>
 
-  <div class="row">
-    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="contact">
+            <div class="content">
+              <div class="form">
+                <?php
+                  if( function_exists( 'ninja_forms_display_form' ) ) {
+                    ninja_forms_display_form( 1 );
+                  }
+                ?>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="data">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="content">
+                  <div class="card">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
 
     </div>
   </div>
