@@ -121,7 +121,7 @@
               ?>
 
               <div class="col-xs-12 col-sm-6 col-lg-3">
-                <div class="sh sv_item">
+                <div class="sh2 sv_item">
                   <div class="circle"></div>
                   <div class="content">
                     <div class="icon"

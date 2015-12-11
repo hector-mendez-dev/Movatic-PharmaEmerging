@@ -77,7 +77,7 @@
                       <li data-menuanchor="service-products">
                         <a href="#service-products" onclick="toogleMenu();">SERVICE</a></li>
                       <li data-menuanchor="contact-us">
-                        <a href="#contact_us" onclick="toogleMenu();">CONTACT US</a></li>
+                        <a href="#contact-us" onclick="toogleMenu();">CONTACT US</a></li>
                     </ul>
                   </div>
                   <!-- Collapse -->
@@ -151,12 +151,12 @@
                         <ul id="menu" class="nav navbar-nav">
                           <li data-menuanchor="home">
                             <a href="#home" onclick="toogleMenu();">HOME</a></li>
-                          <li data-menuanchor="who_we_are">
-                            <a href="#who_we_are" onclick="toogleMenu();">WHO WE ARE?</a></li>
-                          <li data-menuanchor="service">
-                            <a href="#service" onclick="toogleMenu();">SERVICE</a></li>
-                          <li data-menuanchor="contact_us">
-                            <a href="#contact_us" onclick="toogleMenu();">CONTACT US</a></li>
+                          <li data-menuanchor="who-we-are">
+                            <a href="#who-we-are" onclick="toogleMenu();">WHO WE ARE?</a></li>
+                          <li data-menuanchor="service-products">
+                            <a href="#service-products" onclick="toogleMenu();">SERVICE</a></li>
+                          <li data-menuanchor="contact-us">
+                            <a href="#contact-us" onclick="toogleMenu();">CONTACT US</a></li>
                         </ul>
                       </div>
                       <!-- Collapse -->

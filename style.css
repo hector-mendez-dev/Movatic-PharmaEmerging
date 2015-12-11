@@ -189,18 +189,18 @@ body {
   top: -100%;
   left: 0;
   right: 0;
-  z-index: -1; }
+  z-index: 888; }
 
 #fixed-header.fixed {
   background-color: #e9f6f6;
   top: 0;
-  z-index: 888;
   -webkit-transition: top 0.35s ease;
   -moz-transition: top 0.35s ease;
   -o-transition: top 0.35s ease;
   transition: top 0.35s ease; }
 
 .menu_spacer {
+  padding-top: 44px;
   display: block;
   left: 0;
   right: 0; }
@@ -254,14 +254,14 @@ body {
     -webkit-transition: left 0.70s ease;
     -moz-transition: left 0.70s ease;
     -o-transition: left 0.70s ease;
-    transition: left 0.70s ease; }
+    transition: left 0.70s ease;
+    z-index: 8888; }
   #header nav #transition-menu.show, #header nav #fixed-transition-menu.show, #fixed-header nav #transition-menu.show, #fixed-header nav #fixed-transition-menu.show {
     left: 0;
     -webkit-transition: left 0.70s ease;
     -moz-transition: left 0.70s ease;
     -o-transition: left 0.70s ease;
-    transition: left 0.70s ease;
-    z-index: 8888; }
+    transition: left 0.70s ease; }
   #header .buttons, #fixed-header .buttons {
     text-align: center; }
     #header .buttons button, #fixed-header .buttons button {
@@ -445,7 +445,7 @@ body {
   background-position: center;
   background-size: cover; }
   #contact_us-section .section-table {
-    padding-bottom: 64px; }
+    padding-bottom: 60px; }
     #contact_us-section .section-table .section-row .section-cell {
       width: 100%;
       float: left; }
@@ -471,15 +471,15 @@ body {
         position: absolute;
         color: #87868a;
         font-weight: 300;
-        height: 44px;
-        padding: 7px 16px; }
+        height: 40px;
+        padding: 5px 16px; }
       #contact_us-section .contact .form #ninja_forms_form_1_cont .field-wrap .ninja-forms-field, #contact_us-section .contact .form #ninja_forms_form_1_cont .textarea-wrap .ninja-forms-field {
         width: 100%;
         text-transform: uppercase;
         color: #444242;
         font-style: italic;
-        height: 44px;
-        padding: 7px 16px;
+        height: 40px;
+        padding: 5px 16px;
         padding-left: 100px; }
       #contact_us-section .contact .form #ninja_forms_form_1_cont .field-wrap .ninja-forms-field-error, #contact_us-section .contact .form #ninja_forms_form_1_cont .textarea-wrap .ninja-forms-field-error {
         width: 100%;
@@ -492,9 +492,9 @@ body {
           font-size: 12.6px;
           font-size: 0.9rem; }
     #contact_us-section .contact .form #ninja_forms_form_1_cont .textarea-wrap .ninja-forms-field {
-      height: 132px;
-      padding: 10px 16px;
-      padding-top: 44px;
+      height: 120px;
+      padding: 5px 16px;
+      padding-top: 40px;
       min-width: 100%;
       max-width: 100%; }
     #contact_us-section .contact .form #ninja_forms_form_1_cont .submit-wrap {
@@ -542,16 +542,10 @@ body {
     width: 100%;
     bottom: 0;
     height: 62px;
+    overflow: hidden;
     background-color: #444242; }
     #contact_us-section #footer .navbar {
       display: none; }
-
-.page_404 .background {
-  background-position: center;
-  background-clip: content-box;
-  background-size: contain; }
-  .page_404 .background img {
-    padding: 30px 10px; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
@@ -672,7 +666,12 @@ body {
     padding-bottom: 0;
     margin-bottom: -4px; }
     #fixed-header .container-fluid .content {
-      padding: 0; }
+      padding: 0;
+      background-color: #e9f6f6; }
+  #fixed-header nav ul li {
+    background-color: #e9f6f6; }
+  #fixed-header .social_networks {
+    display: none; }
 
   #who_we_are-section .alliance .floating_panels {
     position: relative; }

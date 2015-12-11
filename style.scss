@@ -237,12 +237,11 @@ body {
   top: -100%;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 888;
 }
 #fixed-header.fixed {
   background-color: lighten($blue-2, 31%);
   top: 0;
-  z-index: 888;
   -webkit-transition: top 0.35s ease;
   -moz-transition: top 0.35s ease;
   -o-transition: top 0.35s ease;
@@ -250,7 +249,7 @@ body {
 
 }
 .menu_spacer {
-  //padding-top: $xy-menu-button;
+  padding-top: $xy-menu-button;
   display: block;
   left: 0;
   right: 0;
@@ -311,6 +310,7 @@ body {
       -moz-transition: left 0.70s ease;
       -o-transition: left 0.70s ease;
       transition: left 0.70s ease;
+      z-index: 8888;
     }
     #transition-menu.show, #fixed-transition-menu.show {
       left: 0;
@@ -318,7 +318,6 @@ body {
       -moz-transition: left 0.70s ease;
       -o-transition: left 0.70s ease;
       transition: left 0.70s ease;
-      z-index: 8888;
     }
   }
   .buttons {
@@ -564,7 +563,7 @@ body {
   background-position: center;
   background-size: cover;
   .section-table {
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     .section-row {
       .section-cell {
         width: 100%;
@@ -598,16 +597,16 @@ body {
             position: absolute;
             color: $gray-2;
             font-weight: 300;
-            height: $xy-menu-button;
-            padding: 7px 16px;
+            height: $xy-menu-button - 4;
+            padding: 5px 16px;
           }
           .ninja-forms-field {
             width: 100%;
             text-transform: uppercase;
             color: $gray-0;
             font-style: italic;
-            height: $xy-menu-button;
-            padding: 7px 16px;
+            height: $xy-menu-button - 4;
+            padding: 5px 16px;
             padding-left: 100px;
           }
           .ninja-forms-field-error {
@@ -624,9 +623,9 @@ body {
         }
         .textarea-wrap {
           .ninja-forms-field  {
-            height: $xy-menu-button * 3;
-            padding: 10px 16px;
-            padding-top: $xy-menu-button;
+            height: ($xy-menu-button - 4) * 3;
+            padding: 5px 16px;
+            padding-top: $xy-menu-button - 4;
             min-width: 100%;
             max-width: 100%;
           }
@@ -692,21 +691,10 @@ body {
     width: 100%;
     bottom: 0;
     height: 62px;
+    overflow: hidden;
     background-color: $gray-0;
     .navbar {
       display: none;
-    }
-  }
-}
-
-// ===== 404 =================================
-.page_404 {
-  .background {
-    background-position: center;
-    background-clip: content-box;
-    background-size: contain;
-    img {
-      padding: ($gutter * 3) $gutter;
     }
   }
 }
@@ -870,8 +858,20 @@ body {
       margin-bottom: -4px;
       .content {
          padding: 0;
+         background-color: lighten($blue-2, 31%);
       }
     }
+    nav {
+      ul {
+        li {
+          background-color: lighten($blue-2, 31%);
+        }
+      }
+    }
+    .social_networks {
+      display: none;
+    }
+
   }
 
   // ===== Who we are? =====================================
