@@ -329,19 +329,19 @@
             <div class="row buttons social_networks">
 
               <div class="col-lg-4 button_item">
-                <a href="<?php //the_field('twitter', 30 );?>" target="_blank">
+                <a href="<?php //the_field('twitter', 47 );?>" target="_blank">
                   <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/twitter.svg );">
                   </div>
                 </a>
               </div>
               <div class="col-lg-4 button_item">
-                <a href="<?php //the_field('instagram', 30 );?>" target="_blank">
+                <a href="<?php //the_field('linkedin', 47 );?>" target="_blank">
                   <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/instagram.svg );">
                   </div>
                 </a>
               </div>
               <div class="col-lg-4 button_item">
-                <a href="<?php //the_field('facebook', 30 );?>" target="_blank">
+                <a href="<?php //the_field('facebook', 47 );?>" target="_blank">
                   <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/facebook.svg );">
                   </div>
                 </a>

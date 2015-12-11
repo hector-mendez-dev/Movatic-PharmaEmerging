@@ -132,14 +132,12 @@ body {
   background-color: #a8a8a8; }
   body #mask {
     display: none; }
-  body #mask.show {
+  body #mask.showing {
     display: block;
     position: absolute;
     z-index: 887;
     height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 0.07; }
+    width: 100%; }
 
 .wrapper {
   position: relative; }
@@ -256,7 +254,7 @@ body {
     -o-transition: left 0.70s ease;
     transition: left 0.70s ease;
     z-index: 8888; }
-  #header nav #transition-menu.show, #header nav #fixed-transition-menu.show, #fixed-header nav #transition-menu.show, #fixed-header nav #fixed-transition-menu.show {
+  #header nav #transition-menu.showing, #header nav #fixed-transition-menu.showing, #fixed-header nav #transition-menu.showing, #fixed-header nav #fixed-transition-menu.showing {
     left: 0;
     -webkit-transition: left 0.70s ease;
     -moz-transition: left 0.70s ease;
@@ -619,6 +617,9 @@ body {
     padding: 10px 100px; } }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  body #mask, body #mask.showing {
+    display: none; }
+
   .content {
     padding: 80px 40px; }
 
@@ -645,12 +646,12 @@ body {
       #header nav ul li + li + li + li a, #header nav ul li + li + li + li a:active, #header nav ul li + li + li + li a:visited, #header nav ul li + li + li + li a:hover, #header nav ul li + li + li + li a:link, #header nav ul li + li + li + li a:focus, #fixed-header nav ul li + li + li + li a, #fixed-header nav ul li + li + li + li a:active, #fixed-header nav ul li + li + li + li a:visited, #fixed-header nav ul li + li + li + li a:hover, #fixed-header nav ul li + li + li + li a:link, #fixed-header nav ul li + li + li + li a:focus {
         padding-right: 20px; }
     #header nav #transition-menu,
-    #header nav #transition-menu.show,
+    #header nav #transition-menu.showing,
     #header nav #fixed-transition-menu,
-    #header nav #fixed-transition-menu.show, #fixed-header nav #transition-menu,
-    #fixed-header nav #transition-menu.show,
+    #header nav #fixed-transition-menu.showing, #fixed-header nav #transition-menu,
+    #fixed-header nav #transition-menu.showing,
     #fixed-header nav #fixed-transition-menu,
-    #fixed-header nav #fixed-transition-menu.show {
+    #fixed-header nav #fixed-transition-menu.showing {
       margin: 0;
       padding: 0;
       position: relative;
@@ -670,6 +671,8 @@ body {
       background-color: #e9f6f6; }
   #fixed-header nav ul li {
     background-color: #e9f6f6; }
+  #fixed-header nav ul li + li + li + li a, #fixed-header nav ul li + li + li + li a:active, #fixed-header nav ul li + li + li + li a:visited, #fixed-header nav ul li + li + li + li a:hover, #fixed-header nav ul li + li + li + li a:link, #fixed-header nav ul li + li + li + li a:focus {
+    padding-right: 20px; }
   #fixed-header .social_networks {
     display: none; }
 
@@ -701,6 +704,9 @@ body {
     padding-right: 60px; }
   #header .social_networks {
     padding-top: 5%; }
+
+  #fixed-header nav ul li + li + li + li a, #fixed-header nav ul li + li + li + li a:active, #fixed-header nav ul li + li + li + li a:visited, #fixed-header nav ul li + li + li + li a:hover, #fixed-header nav ul li + li + li + li a:link, #fixed-header nav ul li + li + li + li a:focus {
+    padding-right: 60px; }
 
   #contact_us-section #footer {
     position: absolute;

@@ -165,14 +165,12 @@ body {
   #mask {
     display: none;
   }
-  #mask.show {
+  #mask.showing {
     display: block;
     position: absolute;
     z-index: 887;
     height: 100%;
     width: 100%;
-    background-color: $black;
-    opacity: 0.07;
   }
 }
 .wrapper {
@@ -312,7 +310,7 @@ body {
       transition: left 0.70s ease;
       z-index: 8888;
     }
-    #transition-menu.show, #fixed-transition-menu.show {
+    #transition-menu.showing, #fixed-transition-menu.showing {
       left: 0;
       -webkit-transition: left 0.70s ease;
       -moz-transition: left 0.70s ease;
@@ -794,6 +792,11 @@ body {
 @media (min-width: 768px) {
 
   // ===== Objects ===========================================
+  body {
+    #mask, #mask.showing {
+      display: none;
+    }
+  }
   .content{
     padding: ($gutter * 8) ($gutter * 4);
   }
@@ -834,9 +837,9 @@ body {
         }
       }
       #transition-menu,
-      #transition-menu.show,
+      #transition-menu.showing,
       #fixed-transition-menu,
-      #fixed-transition-menu.show  {
+      #fixed-transition-menu.showing  {
         margin: 0;
         padding: 0;
         position: relative;
@@ -865,6 +868,11 @@ body {
       ul {
         li {
           background-color: lighten($blue-2, 31%);
+        }
+        li+li+li+li {
+          a, a:active, a:visited, a:hover, a:link, a:focus {
+            padding-right: $gutter * 2;
+          }
         }
       }
     }
@@ -940,6 +948,17 @@ body {
     }
     .social_networks {
       padding-top: 5%;
+    }
+  }
+  #fixed-header {
+    nav {
+      ul {
+        li+li+li+li {
+          a, a:active, a:visited, a:hover, a:link, a:focus {
+            padding-right: $gutter * 6;
+          }
+        }
+      }
     }
   }
 

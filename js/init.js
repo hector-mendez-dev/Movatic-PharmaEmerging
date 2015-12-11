@@ -10,16 +10,16 @@ function menuFixed() {
 }
 
 function toogleMenu() {
-    if ($( "#fixed-transition-menu" ).hasClass("show")) {
-			$( "#fixed-transition-menu" ).removeClass("show");
+    if ($( "#fixed-transition-menu" ).hasClass("showing")) {
+			$( "#fixed-transition-menu" ).removeClass("showing");
 			$( "#fixed-transition-menu" ).css('display','block');
-			$( "#mask" ).removeClass("show");
-      //$( "#transition-menu" ).removeClass("show");
+			$( "#mask" ).removeClass("showing");
+      //$( "#transition-menu" ).removeClass("showing");
     }
     else {
-			$( "#fixed-transition-menu" ).addClass("show");
-			$( "#mask" ).addClass("show");
-      //$( "#transition-menu" ).addClass("show");
+			$( "#fixed-transition-menu" ).addClass("showing");
+			$( "#mask" ).addClass("showing");
+      //$( "#transition-menu" ).addClass("showing");
     }
 }
 

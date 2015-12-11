@@ -65,7 +65,7 @@
                 </div>
               </div>
 
-              <div class="col-xs-12 col-md-8">
+              <div class="col-xs-12">
                 <nav class="navbar navbar-default">
 
                   <div class="" id="fixed-transition-menu">
