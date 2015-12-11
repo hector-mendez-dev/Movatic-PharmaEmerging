@@ -21,6 +21,6 @@ $( document ).ready(function() {
 		didResize = false;
 		bumpIt();
 	  }
-		//$.fn.fullpage.reBuild();
+		$.fn.fullpage.reBuild();
 	}, 80);
 });

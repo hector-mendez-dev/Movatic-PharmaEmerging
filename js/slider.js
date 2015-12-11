@@ -46,9 +46,13 @@ $(function() {
   set_index(1);
 
   function startSlider() {
+    var open = false;
       interval = setInterval(function() {
-		currentSlide++;
-		go_to_slide(currentSlide);
+        if(( $( "body" ).hasClass("fp-viewing-service-products")) || (open)) {
+          open = true;
+      		currentSlide++;
+      		go_to_slide(currentSlide);
+        }
       }, pause);
   }
 

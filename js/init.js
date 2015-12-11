@@ -14,12 +14,10 @@ function toogleMenu() {
 			$( "#fixed-transition-menu" ).removeClass("showing");
 			$( "#fixed-transition-menu" ).css('display','block');
 			$( "#mask" ).removeClass("showing");
-      //$( "#transition-menu" ).removeClass("showing");
     }
     else {
 			$( "#fixed-transition-menu" ).addClass("showing");
 			$( "#mask" ).addClass("showing");
-      //$( "#transition-menu" ).addClass("showing");
     }
 }
 
