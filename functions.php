@@ -195,6 +195,35 @@ function slide_post_type() {
 }
 add_action( 'init', 'slide_post_type' );
 
+function b_card_post_type() {
+	$labels = array(
+		'name'               => 'Business Card',
+		'singular_name'      => 'Card',
+		'all_items'          => 'all',
+		'add_new'            => 'Add New',
+		'add_new_item'       => 'Add New',
+		'edit_item'          => 'Edit',
+		'new_item'           => 'New',
+		'view_item'          => 'View',
+		'search_items'       => 'Search',
+		'not_found'          => 'Nothing found',
+		'not_found_in_trash' => 'Nothing found',
+		'parent_item_colon'  => ' ',
+		'menu_name'          => 'Business Card'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'Business Card',
+		'public'        => true,
+		'menu_position' => 7,
+		'menu_icon'     => 'dashicons-money',
+		'supports'      => array(  'title' , 'page-attributes'  ),
+		'has_archive'   => true
+	);
+	register_post_type( 'b_card', $args );
+}
+add_action( 'init', 'b_card_post_type' );
+
 /* ==== REMOVING =====
 
 function wpse28782_remove_plugin_admin_menu() {

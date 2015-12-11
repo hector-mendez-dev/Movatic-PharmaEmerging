@@ -32,7 +32,9 @@ function init() {
 
 $( document ).ready(function() {
 	$('#fullpage').fullpage({
-		scrollOverflow: true
+		scrollOverflow: true,
+		anchors:['home','who-we-are','service-products','contact-us'],
+		//menu: '#menu'
 	});
 	init();
 

@@ -72,11 +72,11 @@
                     <ul class="nav navbar-nav">
                       <li data-menuanchor="home">
                         <a href="#home" onclick="toogleMenu();">HOME</a></li>
-                      <li data-menuanchor="who_we_are">
-                        <a href="#who_we_are" onclick="toogleMenu();">WHO WE ARE?</a></li>
-                      <li data-menuanchor="service">
-                        <a href="#service" onclick="toogleMenu();">SERVICE</a></li>
-                      <li data-menuanchor="contact_us">
+                      <li data-menuanchor="who-we-are">
+                        <a href="#who-we-are" onclick="toogleMenu();">WHO WE ARE?</a></li>
+                      <li data-menuanchor="service-products">
+                        <a href="#service-products" onclick="toogleMenu();">SERVICE</a></li>
+                      <li data-menuanchor="contact-us">
                         <a href="#contact_us" onclick="toogleMenu();">CONTACT US</a></li>
                     </ul>
                   </div>
@@ -95,7 +95,7 @@
   </div>
 
   <div id="fullpage">
-    <div id="home" class="section">
+    <div id="home-section" class="section">
 
       <div class="section-table">
         <div id="header" class="section-row">
@@ -148,7 +148,7 @@
                     <nav class="navbar navbar-default">
 
                       <div class="" id="transition-menu">
-                        <ul class="nav navbar-nav">
+                        <ul id="menu" class="nav navbar-nav">
                           <li data-menuanchor="home">
                             <a href="#home" onclick="toogleMenu();">HOME</a></li>
                           <li data-menuanchor="who_we_are">

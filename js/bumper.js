@@ -46,5 +46,6 @@ $( document ).ready(function() {
 		didResize = false;
 		bumpIt();
 	  }
+		$.fn.fullpage.reBuild();
 	}, 80);
 });
