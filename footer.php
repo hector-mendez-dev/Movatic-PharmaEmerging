@@ -1,4 +1,3 @@
-    </div> <!-- /fullpage -->
   </div> <!-- /container -->
 
     <?php wp_footer(); ?>

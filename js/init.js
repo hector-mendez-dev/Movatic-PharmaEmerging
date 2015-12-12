@@ -1,40 +1,45 @@
 function menuFixed() {
-	if( !($( "body" ).hasClass("fp-viewing-home") )) {
-		$( "#fixed-header" ).addClass("fixed");
-	}
-	else {
-			if ($( "#fixed-header" ).hasClass("fixed")) {
-				$( "#fixed-header" ).removeClass("fixed");
-			}
-	}
+	var menuY = 238;
+  var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+      fixedOn = menuY;
+
+  if (distanceY > fixedOn) {
+    $( "#home" ).css("padding-top", 238 );
+    $( "#header" ).addClass("fixed");
+  } else {
+      if ($( "#header" ).hasClass("fixed")) {
+				$( "#home" ).css("padding-top", 0 );
+        $( "#header" ).removeClass("fixed");
+      }
+  }
 }
 
 function toogleMenu() {
-    if ($( "#fixed-transition-menu" ).hasClass("showing")) {
-			$( "#fixed-transition-menu" ).removeClass("showing");
-			$( "#fixed-transition-menu" ).css('display','block');
+    if ($( "#transition-menu" ).hasClass("showing")) {
+			$( "#transition-menu" ).removeClass("showing");
 			$( "#mask" ).removeClass("showing");
     }
     else {
-			$( "#fixed-transition-menu" ).addClass("showing");
+			$( "#transition-menu" ).addClass("showing");
 			$( "#mask" ).addClass("showing");
     }
 }
 
 function init() {
 
-	setInterval(function() {
-		menuFixed();
-	}, 40);
+	if (window.addEventListener) {    // For all major browsers, gte IE 9 versions
+		window.addEventListener("scroll", menuFixed, false);
+	} else if (window.attachEvent) {    // For lt IE 9 versions
+		window.attachEvent("onscroll", menuFixed);
+	}
+
 	supportsSVG();
 }
 
 $( document ).ready(function() {
-	$('#fullpage').fullpage({
-		scrollOverflow: true,
-		anchors:['home','who-we-are','service-products','contact-us'],
-	});
 	init();
-
+	$("#menu").localScroll({
+		duration: 800
+	});
 
 });

@@ -2,9 +2,6 @@ function bumpIt() {
 
 	$('.sh').matchHeight();
 	$('.sh2').matchHeight();
-	$('.data').matchHeight({
-		target: $('.contact')
-	});
 
  }
  var didResize = false;
@@ -21,6 +18,5 @@ $( document ).ready(function() {
 		didResize = false;
 		bumpIt();
 	  }
-		$.fn.fullpage.reBuild();
 	}, 80);
 });

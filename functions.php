@@ -40,7 +40,8 @@ if ( !is_admin() ){
 		}
 
 		$scripts = array(
-			'scriptA' => '/js/jquery.slimscroll.min.js',// Must load before fullPage.js
+			'scriptA' => '/js/jquery.localScroll.min.js',
+			'scriptB' => '/js/jquery.scrollTo.min.js',
 			'scriptC' => '/js/bumper.js',
 			'scriptD' => '/js/supportsSVG.js',
 			'scriptE' => '/js/slider.js',
@@ -54,8 +55,7 @@ if ( !is_admin() ){
 		$scripts_CDN = array(
 			'script1' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js',
 			'script2' => 'https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js',
-			'script3' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js',
-			'script4' => 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js'
+			'script3' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js'
 			);
 		foreach( $scripts_CDN as $key=>$sc ){
 			wp_register_script( $key , $sc , array('jquery'));
@@ -259,19 +259,7 @@ function wpse28782_remove_menu_items() {
 	remove_menu_page('edit.php'); // Posts
 	remove_menu_page('edit-comments.php'); // Comments
 	remove_menu_page('themes.php'); // Appearance
-	//remove_menu_page('tools.php'); // Tools
+	remove_menu_page('tools.php'); // Tools
 
 }
 add_action( 'admin_menu', 'wpse28782_remove_menu_items' );
-
-
-function exclude_this_page( $query ) {
-	global $pagenow;
-	if( 'edit.php' == $pagenow && ( get_query_var('post_type') && 'page' == get_query_var('post_type') ) )
-		$query->set( 'post__not_in', array(
-			50, //CATALOGO
-			151 //PREGUNTAS Y TIPS
-		) );
-	return $query;
-}
-add_action( 'pre_get_posts' ,'exclude_this_page' );

@@ -161,7 +161,8 @@ input, textarea {
 // ===== Objects ===========================================
 $xy-menu-button: 44px;
 body {
-  background-color: #a8a8a8; //$white;
+  overflow-x: hidden;
+  background-color: $white;
   #mask {
     display: none;
   }
@@ -205,11 +206,31 @@ body {
   margin: 0;
 }
 
-#header, #fixed-header {
+#header{
   position: relative;
   left: 0;
   right: 0;
+  top: 0;
   border: 0;
+  z-index: 888;
+  background-color: $white;
+  .container-fluid{
+    padding-bottom: $gutter * 2;
+    .content{
+      padding: 0;
+    }
+  }
+  #logo {
+    padding: ($gutter * 2) 0;
+    .brand {
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 100%;
+      padding-top: 130px;
+    }
+  }
   .navbar {
     min-height: 0;
   }
@@ -228,27 +249,59 @@ body {
       }
     }
   }
+  #transition-menu {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    margin-right: -100%;
+    max-width: 100%;
+    -webkit-transition: left 0.70s ease;
+    -moz-transition: left 0.70s ease;
+    -o-transition: left 0.70s ease;
+    transition: left 0.70s ease;
+    z-index: 8888;
+  }
+  #transition-menu.showing {
+    left: 0;
+    -webkit-transition: left 0.70s ease;
+    -moz-transition: left 0.70s ease;
+    -o-transition: left 0.70s ease;
+    transition: left 0.70s ease;
+  }
 }
-#fixed-header {
+#header.fixed {
+  #logo {
+    display: none;
+  }
   position: fixed;
   margin-top: 0;
-  top: -100%;
-  left: 0;
-  right: 0;
-  z-index: 888;
-}
-#fixed-header.fixed {
-  background-color: lighten($blue-2, 31%);
   top: 0;
+  background-color: lighten($blue-2, 31%);
   -webkit-transition: top 0.35s ease;
   -moz-transition: top 0.35s ease;
   -o-transition: top 0.35s ease;
   transition: top 0.35s ease;
 
+  max-height: $xy-menu-button;
+  .container-fluid {
+    padding-bottom: 0;
+    margin-bottom: -4px;
+    .content {
+       padding: 0;
+    }
+  }
+  .social_networks {
+    a {
+      padding: 10px 0;
+    }
+  }
 }
 .menu_spacer {
-  padding-top: $xy-menu-button;
-  display: block;
+  // padding-top: $xy-menu-button;
+  // display: block;
+  display: none;
   left: 0;
   right: 0;
 }
@@ -263,22 +316,7 @@ body {
 
 
 // ===== Header =================================================
-.brand {
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 78%;
-  width: 100%;
-  padding-top: 40%;
-}
-#header, #fixed-header {
-  background-color: $white;
-  .container-fluid{
-    padding-bottom: $gutter * 3;
-    .content{
-      padding: 0;
-    }
-  }
+#header {
   nav {
     ul {
       list-style-type: none;
@@ -295,27 +333,6 @@ body {
           padding: 20px 30px 20px 40px;
         }
       }
-    }
-    #transition-menu, #fixed-transition-menu {
-      margin: 0;
-      padding: 0;
-      position: fixed;
-      top: 0;
-      left: -100%;
-      margin-right: -100%;
-      max-width: 100%;
-      -webkit-transition: left 0.70s ease;
-      -moz-transition: left 0.70s ease;
-      -o-transition: left 0.70s ease;
-      transition: left 0.70s ease;
-      z-index: 8888;
-    }
-    #transition-menu.showing, #fixed-transition-menu.showing {
-      left: 0;
-      -webkit-transition: left 0.70s ease;
-      -moz-transition: left 0.70s ease;
-      -o-transition: left 0.70s ease;
-      transition: left 0.70s ease;
     }
   }
   .buttons {
@@ -350,34 +367,17 @@ body {
     }
   }
 }
-#fixed-header {
-  max-height: $xy-menu-button;
-  .container-fluid {
-    padding-bottom: 0;
-    margin-bottom: -4px;
-    .content {
-       padding: 0;
-    }
-  }
-  .social_networks {
-    a {
-      padding: 10px 0;
-    }
-  }
-}
 
 // ===== Home ============================================
-#home-section {
+#home {
   #home-intro {
-    .section-cell {
-      height: 100%;
-      background-image:
-        url("assets/img/background/floating_right_panel.svg"),
-        url("assets/img/background/intro.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
+    height: 100%;
+    background-image:
+      url("assets/img/background/floating_right_panel.svg"),
+      url("assets/img/background/intro.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     .content {
       p {
         @include font-size(1);
@@ -392,7 +392,7 @@ body {
 }
 
 // ===== Who we are? =====================================
-#who_we_are-section {
+#who_we_are {
   background-color: $white;
   .alliance {
     background-image: url("assets/img/background/alliance.jpg");
@@ -411,7 +411,7 @@ body {
     .floating_panels {
       position: relative;
       .left {
-        margin-top: -315px;
+        margin-top: -220px;
         padding-top: 360px;
         position: absolute;
         background-image: url("assets/img/background/floating_left_panel.svg");
@@ -482,7 +482,7 @@ body {
 }
 
 // ===== Service =========================================
-#service-section {
+#service {
   .service_products {
     background-image: url("assets/img/background/service.jpg");
     background-repeat: no-repeat;
@@ -555,7 +555,7 @@ body {
   }
 }
 // ===== Contact us ======================================
-#contact_us-section {
+#contact_us {
   background-image: url("assets/img/background/contact.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -765,7 +765,7 @@ body {
   }
 
   // ===== Home ============================================
-  #home-section {
+  #home {
     .intro {
       p {
         @include font-size(1.3);
@@ -776,7 +776,15 @@ body {
   }
 
   // ===== Who we are? =====================================
-  #who_we_are-section {
+  #who_we_are {
+    .alliance {
+      .floating_panels {
+        .left {
+          margin-top: -315px;
+          padding-top: 360px;
+        }
+      }
+    }
     .service_value {
       .sv_items {
         .sv_item {
@@ -800,15 +808,72 @@ body {
   .content{
     padding: ($gutter * 8) ($gutter * 4);
   }
-  #header, #fixed-header {
+  #header {
     .container-fluid{
       .content{
         padding: 0 $gutter;
       }
     }
-    .brand {
-      padding-top: 40%;
+    #logo {
+      padding: 0 $gutter;
+      .brand {
+        padding-top: 155px;
+      }
     }
+    .navbar {
+      margin-right: -($gutter);
+    }
+    nav {
+      ul {
+        li {
+          background-color: $white;
+        }
+      }
+      #transition-menu,
+      #transition-menu.showing {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+      }
+    }
+    button {
+      visibility: hidden;
+    }
+    .social_networks {
+      padding-top: $xy-menu-button;
+    }
+  }
+  #header.fixed {
+    .container-fluid {
+      padding-bottom: 0;
+      margin-bottom: -4px;
+      .content {
+         padding: 0;
+         background-color: lighten($blue-2, 31%);
+      }
+    }
+    nav {
+      ul {
+        li {
+          background-color: lighten($blue-2, 31%);
+        }
+        li+li+li+li {
+          a, a:active, a:visited, a:hover, a:link, a:focus {
+            padding-right: $gutter * 2;
+          }
+        }
+      }
+    }
+    .social_networks {
+      display: none;
+    }
+
+  }
+  // ===== Header =================================================
+  #header {
     .navbar {
       margin-right: -($gutter);
     }
@@ -817,7 +882,6 @@ body {
       ul {
         li {
           border-bottom-color: $gray-4;
-          background-color: $white;
           a, a:active, a:visited, a:hover, a:link, a:focus {
             color: $gray-3;
             padding: 20px 30px;
@@ -848,47 +912,16 @@ body {
         width: auto;
       }
     }
-    button {
-      visibility: hidden;
-    }
-    .social_networks {
-      padding-top: 10%;
-    }
   }
-  #fixed-header {
-    .container-fluid {
-      padding-bottom: 0;
-      margin-bottom: -4px;
-      .content {
-         padding: 0;
-         background-color: lighten($blue-2, 31%);
-      }
-    }
-    nav {
-      ul {
-        li {
-          background-color: lighten($blue-2, 31%);
-        }
-        li+li+li+li {
-          a, a:active, a:visited, a:hover, a:link, a:focus {
-            padding-right: $gutter * 2;
-          }
-        }
-      }
-    }
-    .social_networks {
-      display: none;
-    }
 
-  }
 
   // ===== Who we are? =====================================
-  #who_we_are-section {
+  #who_we_are {
     .alliance{
       .floating_panels {
         position: relative;
         .left {
-          margin-top: -300px;
+          margin-top: -250px;
           padding-top: 360px;
         }
         .right {
@@ -929,14 +962,19 @@ body {
 
   // ===== Objects ===========================================
   #header {
-    .brand {
-      background-position: center 70%;
+    #logo {
+      padding: 120px $gutter 0 $gutter;
+      .brand {
+        padding-top: 100px;
+      }
     }
     nav {
+      padding-top: 38px;
+      padding-bottom: ($gutter * 2);
       ul {
         li {
           a, a:active, a:visited, a:hover, a:link, a:focus {
-            padding: 20px 13px;
+            padding: 20px 10px;
           }
         }
         li+li+li+li {
@@ -946,12 +984,13 @@ body {
         }
       }
     }
-    .social_networks {
-      padding-top: 5%;
-    }
   }
-  #fixed-header {
+  #header.fixed {
+    .nav-col {
+      width: 100%;
+    }
     nav {
+      padding: 0;
       ul {
         li+li+li+li {
           a, a:active, a:visited, a:hover, a:link, a:focus {
@@ -963,7 +1002,7 @@ body {
   }
 
   // ===== Contact us ======================================
-  #contact_us-section {
+  #contact_us {
     #footer {
       position: absolute;
       width: 100%;
@@ -1013,7 +1052,7 @@ body {
   }
 
   // ===== Who we are? =====================================
-  #who_we_are-section {
+  #who_we_are {
     .alliance{
       h2 {
         text-align: left;
@@ -1021,8 +1060,8 @@ body {
       .floating_panels {
         position: relative;
         .left {
-          margin-top: -300px;
-          padding-top: 350px;
+          margin-top: -260px;
+          padding-top: 310px;
         }
         .right {
           margin-top: -320px;
@@ -1058,7 +1097,7 @@ body {
   }
 
   // ===== Contact us ======================================
-  #contact_us-section {
+  #contact_us {
     .section-table {
       .section-row {
         .section-cell {

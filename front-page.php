@@ -5,28 +5,26 @@
   $who_we_are = get_field( 'who_we_are' );
 ?>
 
-    <div id="home-intro" class="section-row">
-      <div class="section-cell">
+    <div id="home-intro">
 
-        <div class="container-fluid">
-          <div class="content">
+      <div class="container-fluid">
+        <div class="content">
 
-            <div class="row">
-              <div class="col-xs-12">
-                <div>
-                  <p><?php echo $intro; ?></p>
-                </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div>
+                <p><?php echo $intro; ?></p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
+
     </div>
-  </div><!-- section-table -->
+
 </div><!-- section -->
 
-<div id="who_we_are-section" class="section">
+<div id="who_we_are" class="section">
   <div class="container-fluid">
     <div class="menu_spacer"></div>
 
@@ -148,7 +146,7 @@
   </div>
 </div>
 
-<div id="service-section" class="section">
+<div id="service" class="section">
 
   <div class="service_products section-table">
 
@@ -231,7 +229,7 @@
 
 </div>
 
-<div id="contact_us-section" class="section">
+<div id="contact_us" class="section">
   <div class="menu_spacer"></div>
 
   <div class="section-table">
@@ -329,19 +327,19 @@
             <div class="row buttons social_networks">
 
               <div class="col-lg-4 button_item">
-                <a href="<?php //the_field('twitter', 47 );?>" target="_blank">
+                <a href="<?php the_field('twitter', 47 );?>" target="_blank">
                   <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/twitter.svg );">
                   </div>
                 </a>
               </div>
               <div class="col-lg-4 button_item">
-                <a href="<?php //the_field('linkedin', 47 );?>" target="_blank">
-                  <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/instagram.svg );">
+                <a href="<?php the_field('linkedin', 47 );?>" target="_blank">
+                  <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/linkedin.svg );">
                   </div>
                 </a>
               </div>
               <div class="col-lg-4 button_item">
-                <a href="<?php //the_field('facebook', 47 );?>" target="_blank">
+                <a href="<?php the_field('facebook', 47 );?>" target="_blank">
                   <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/social_networks/facebook.svg );">
                   </div>
                 </a>
